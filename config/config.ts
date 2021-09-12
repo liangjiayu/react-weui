@@ -17,6 +17,24 @@ export default {
       },
     ],
   },
+  alias: {
+    '@': process.cwd() + '/src/',
+  },
+  scripts: [
+    `if (location.pathname.startsWith('/~demos/')) {
+      document.body.style.background = '#f5f5f5'
+    }`,
+  ],
+  styles: [
+    ` 
+    #root .__dumi-default-mobile-demo-layout {
+      padding: 0;
+    }
+    a[title='站长统计'] {
+      display: none;
+    }
+    `,
+  ],
   themeConfig: {
     hd: {
       rules: [

@@ -1,11 +1,15 @@
 {
+  "semi": true,
+  "arrowParens": "always",
   "singleQuote": true,
-  "trailingComma": "all",
+  "trailingComma": "es5",
   "printWidth": 80,
   "overrides": [
     {
       "files": ".prettierrc",
-      "options": { "parser": "json" }
+      "options": {
+        "parser": "json"
+      }
     }
   ]
 }

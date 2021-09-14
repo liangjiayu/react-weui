@@ -3,18 +3,20 @@ import classNames from 'classnames';
 import './style.less';
 
 type ButtonProps = {
-  type: 'primary' | 'default' | 'warn';
+  type?: 'primary' | 'default' | 'warn';
   size?: 'mini';
   block?: boolean;
   disabled?: boolean;
   loading?: boolean;
+  onClick?: () => void;
 };
 
 const Button: React.FC<ButtonProps> = (props) => {
-  const { children, type, size, disabled, loading, block } = props;
+  const { children, type, size, disabled, loading, block, onClick } = props;
 
   return (
     <button
+      onClick={onClick}
       className={classNames('weui-btn', `weui-btn_${type}`, {
         [`weui-btn_mini`]: size === 'mini',
         [`weui-btn_disabled`]: disabled,

@@ -46,8 +46,10 @@ export default () => {
           警告类操作
         </Button>
       </DemoBlock>
-
-      <DemoBlock title="mini" style={{ textAlign: 'center' }}>
+      <DemoBlock
+        title="mini"
+        style={{ display: 'flex', justifyContent: 'space-around' }}
+      >
         <Button type="primary" size="mini">
           按钮
         </Button>

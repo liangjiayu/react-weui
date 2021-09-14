@@ -13,7 +13,11 @@ export default {
     '/components': [
       {
         title: '基础',
-        children: ['/components/Button', '/components/Flex'],
+        children: [
+          '/components/Button',
+          '/components/Flex',
+          '/components/Icon',
+        ],
       },
     ],
   },

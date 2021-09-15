@@ -14,6 +14,7 @@
       "@@/*": ["src/.umi/*"]
     },
     "declaration": true,
+    "skipLibCheck": true,
     "allowSyntheticDefaultImports": true
   },
   "exclude": [

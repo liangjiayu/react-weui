@@ -15,7 +15,7 @@ export default {
         title: '基础',
         children: [
           '/components/Button',
-          '/components/Flex',
+          '/components/Cells',
           '/components/Icon',
         ],
       },

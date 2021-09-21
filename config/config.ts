@@ -17,6 +17,7 @@ export default {
           '/components/Button',
           '/components/Cells',
           '/components/Icon',
+          '/components/Flex',
         ],
       },
     ],

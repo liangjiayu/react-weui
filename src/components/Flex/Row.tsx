@@ -9,17 +9,23 @@ export type RowProps = {
   wrap?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
+const defaultProps = {
+  gutter: 0,
+  align: 'top',
+  justify: 'start',
+} as Required<Pick<RowProps, 'align' | 'justify' | 'gutter'>>;
+
 const Row: React.FC<RowProps> = (props) => {
   const {
     children,
-    align = 'top',
-    justify = 'start',
-    gutter = 0,
+    align,
+    justify,
+    gutter,
     wrap,
     style,
     className,
     ...others
-  } = props;
+  } = props as RowProps & typeof defaultProps;
 
   const classes = classNames(
     'weui-row',
@@ -51,5 +57,7 @@ const Row: React.FC<RowProps> = (props) => {
     </RowContext.Provider>
   );
 };
+
+Row.defaultProps = defaultProps;
 
 export default Row;

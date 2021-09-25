@@ -12,13 +12,17 @@ export default {
   menus: {
     '/components': [
       {
-        title: '基础',
+        title: '基础组件',
         children: [
           '/components/Button',
           '/components/Cells',
           '/components/Icon',
           '/components/Flex',
         ],
+      },
+      {
+        title: '反馈组件',
+        children: ['/components/Toast'],
       },
     ],
   },

@@ -22,7 +22,7 @@ export default {
       },
       {
         title: '反馈组件',
-        children: ['/components/Toast'],
+        children: ['/components/Toast', '/components/Dialog'],
       },
     ],
   },

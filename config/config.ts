@@ -26,6 +26,7 @@ export default {
           '/components/Toast',
           '/components/Dialog',
           '/components/ActionSheet',
+          '/components/Msg',
         ],
       },
     ],

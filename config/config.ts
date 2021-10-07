@@ -3,6 +3,8 @@ export default {
   title: 'react-weui',
   logo: 'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
   outputPath: 'docs-dist',
+  base: '/react-weui/',
+  publicPath: '/react-weui/',
   navs: [
     {
       title: '组件',
@@ -35,7 +37,7 @@ export default {
     '@': process.cwd() + '/src/',
   },
   scripts: [
-    `if (location.pathname.startsWith('/~demos/')) {
+    `if (location.pathname.startsWith('/react-weui/~demos/')) {
       document.body.style.background = '#f5f5f5'
     }`,
   ],

@@ -1,0 +1,10 @@
+node_modules
+dist
+**/docs-dist
+**/lib
+**/es
+.umi
+.umi-production
+.umi-test
+**/*.svg
+.eslintrc.js

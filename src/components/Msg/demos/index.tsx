@@ -48,7 +48,7 @@ export default () => {
               <Button type="default">辅助操作</Button>
             </div>
           }
-        ></Msg>
+        />
       </DemoBlock>
     </div>
   );

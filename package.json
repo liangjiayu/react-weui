@@ -12,7 +12,9 @@
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src && npm run prettier",
+    "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src && npm run prettier"
   },
   "main": "es/index.js",
   "module": "es/index.esm.js",
@@ -21,11 +23,9 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx,less,md,json}": [
+    "**/*.{js,jsx,ts,tsx}": "eslint --ext .js,.jsx,.ts,.tsx",
+    "**/*.{js,jsx,tsx,ts,less,md,json}": [
       "prettier --write"
-    ],
-    "*.ts?(x)": [
-      "prettier --parser=typescript --write"
     ]
   },
   "dependencies": {
@@ -35,10 +35,12 @@
   "devDependencies": {
     "@types/classnames": "^2.3.1",
     "@types/react": "^16.14.2",
+    "@umijs/fabric": "^2.8.0",
     "@umijs/test": "^3.0.5",
     "classnames": "^2.3.1",
     "dumi": "^1.0.16",
     "dumi-theme-mobile": "^1.1.9",
+    "eslint": "^7.32.0",
     "father-build": "^1.17.2",
     "gh-pages": "^3.0.0",
     "lint-staged": "^10.0.7",

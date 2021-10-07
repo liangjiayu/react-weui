@@ -46,7 +46,7 @@ const Toast: React.FC<ToastProps> = (props) => {
 
   return (
     <div role="alert" style={{ display: visible ? 'block' : 'none' }}>
-      {maskVisible && <div className="weui-mask_transparent"></div>}
+      {maskVisible && <div className="weui-mask_transparent" />}
       <div
         className={classNames('weui-toast', {
           'weui-toast_text': !icon,
@@ -60,9 +60,7 @@ const Toast: React.FC<ToastProps> = (props) => {
               'weui-primary-loading': icon === 'loading',
             })}
           >
-            {icon === 'loading' && (
-              <i className="weui-primary-loading__dot"></i>
-            )}
+            {icon === 'loading' && <i className="weui-primary-loading__dot" />}
           </div>
         )}
 

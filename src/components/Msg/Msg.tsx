@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import React from 'react';
 import Icon from '../Icon';
 
 type MsgProps = {
@@ -17,7 +18,7 @@ const Msg: React.FC<MsgProps> = (props) => {
     <div className="weui-msg">
       {icon && (
         <div className="weui-msg__icon-area">
-          <Icon type={icon} className="weui-icon_msg"></Icon>
+          <Icon type={icon} className="weui-icon_msg" />
         </div>
       )}
 

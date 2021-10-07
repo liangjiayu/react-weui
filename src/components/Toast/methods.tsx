@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import InternalToast, { ToastProps } from './Toast';
+import type { ToastProps } from './Toast';
+import InternalToast from './Toast';
 
 function toast(config: ToastProps) {
   const div = document.createElement('div');

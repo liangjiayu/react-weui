@@ -1,5 +1,6 @@
 import classNames from 'classnames';
-import React, { ReactNode, useEffect } from 'react';
+import type { ReactNode } from 'react';
+import React, { useEffect } from 'react';
 
 export type DialogProps = {
   title?: ReactNode;
@@ -64,7 +65,7 @@ const Dialog: React.FC<DialogProps> = (props) => {
           >
             {confirmLoading ? (
               <span className="weui-primary-loading">
-                <i className="weui-primary-loading__dot"></i>
+                <i className="weui-primary-loading__dot" />
               </span>
             ) : (
               okText
@@ -77,7 +78,7 @@ const Dialog: React.FC<DialogProps> = (props) => {
 
   return (
     <div style={{ display: visible ? 'block' : 'none' }}>
-      <div className="weui-mask"></div>
+      <div className="weui-mask" />
       <div className={classNames('weui-dialog', className)} style={style}>
         {title && (
           <div className="weui-dialog__hd">

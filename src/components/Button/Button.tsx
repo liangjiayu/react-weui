@@ -31,7 +31,7 @@ const Button: React.FC<ButtonProps> = (props) => {
               ['weui-primary-loading_transparent']: type === 'primary',
             })}
           >
-            <i className="weui-primary-loading__dot"></i>
+            <i className="weui-primary-loading__dot" />
           </span>
           {children}
         </>

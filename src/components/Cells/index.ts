@@ -1,4 +1,5 @@
-import _Cells, { CellsProps } from './Cells';
+import type { CellsProps } from './Cells';
+import _Cells from './Cells';
 import CellsItem from './CellsItem';
 import './style.less';
 

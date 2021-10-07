@@ -16,7 +16,7 @@ const Icon: React.FC<IconProps> = (props) => {
       className={classNames(`weui-icon-${type}`, className)}
       onClick={onClick}
       style={{ width: size, height: size, color: color }}
-    ></i>
+    />
   );
 };
 

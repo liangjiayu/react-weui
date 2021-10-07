@@ -1,4 +1,5 @@
-import React, { ReactNode, useEffect } from 'react';
+import type { ReactNode } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 
 type ActionSheetProps = {
@@ -78,7 +79,7 @@ const ActionSheet: React.FC<ActionSheetProps> = (props) => {
             onClose();
           }
         }}
-      ></div>
+      />
 
       <div
         role="dialog"
@@ -104,7 +105,7 @@ const ActionSheet: React.FC<ActionSheetProps> = (props) => {
                     onClose();
                   }
                 }}
-              ></ActionSheetItem>
+              />
             );
           })}
         </div>
@@ -118,7 +119,7 @@ const ActionSheet: React.FC<ActionSheetProps> = (props) => {
                 onClose();
               }}
               name={cancelText}
-            ></ActionSheetItem>
+            />
           </div>
         )}
       </div>

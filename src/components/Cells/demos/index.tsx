@@ -1,7 +1,7 @@
 import React from 'react';
 import { Cells } from 'react-weui';
 
-const styles: { [key: string]: React.CSSProperties } = {
+const styles: Record<string, React.CSSProperties> = {
   icon: {
     width: 24,
     height: 24,
@@ -20,23 +20,23 @@ export default () => {
         <Cells.Item>3</Cells.Item>
       </Cells>
       <Cells title="带图标、说明的列表项">
-        <Cells.Item prefix={<div style={styles.icon}></div>} extra="说明文字">
+        <Cells.Item prefix={<div style={styles.icon} />} extra="说明文字">
           标题文字
         </Cells.Item>
-        <Cells.Item prefix={<div style={styles.icon}></div>} extra="说明文字">
+        <Cells.Item prefix={<div style={styles.icon} />} extra="说明文字">
           标题文字
         </Cells.Item>
       </Cells>
       <Cells title="带图标、说明、跳转的列表项">
         <Cells.Item
-          prefix={<div style={styles.icon}></div>}
+          prefix={<div style={styles.icon} />}
           extra={<div style={{ fontSize: 14 }}>说明文字</div>}
           arrow
         >
           标题文字
         </Cells.Item>
         <Cells.Item
-          prefix={<div style={styles.icon}></div>}
+          prefix={<div style={styles.icon} />}
           extra={<div style={{ fontSize: 14 }}>说明文字</div>}
           arrow
         >

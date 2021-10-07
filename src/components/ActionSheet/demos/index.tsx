@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ActionSheet, Button, Cells } from 'react-weui';
+import { ActionSheet, Button } from 'react-weui';
 import DemoBlock from '@/demos/DemoBlock';
 
 function BasicDemo() {
@@ -24,7 +24,7 @@ function BasicDemo() {
         onClose={() => {
           setVisible(false);
         }}
-      ></ActionSheet>
+      />
     </>
   );
 }
@@ -52,7 +52,7 @@ function CancelDemo() {
         onClose={() => {
           setVisible(false);
         }}
-      ></ActionSheet>
+      />
     </>
   );
 }
@@ -86,7 +86,7 @@ function OptionDemo() {
         onClose={() => {
           setVisible(false);
         }}
-      ></ActionSheet>
+      />
     </>
   );
 }
@@ -123,7 +123,7 @@ function EventDemo() {
         onClose={() => {
           setVisible(false);
         }}
-      ></ActionSheet>
+      />
     </>
   );
 }
@@ -159,20 +159,20 @@ export default () => {
   return (
     <div style={{ paddingTop: 30, paddingBottom: 60 }}>
       <DemoBlock title="基础用法">
-        <BasicDemo></BasicDemo>
-        <CancelDemo></CancelDemo>
+        <BasicDemo />
+        <CancelDemo />
       </DemoBlock>
 
       <DemoBlock title="选项状态">
-        <OptionDemo></OptionDemo>
+        <OptionDemo />
       </DemoBlock>
 
       <DemoBlock title="事件处理">
-        <EventDemo></EventDemo>
+        <EventDemo />
       </DemoBlock>
 
       <DemoBlock title="自定义面板">
-        <DiyDemo></DiyDemo>
+        <DiyDemo />
       </DemoBlock>
     </div>
   );

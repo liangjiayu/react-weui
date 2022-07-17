@@ -8,3 +8,4 @@ export { default as toast } from './components/Toast';
 export { default as Dialog } from './components/Dialog';
 export { default as ActionSheet } from './components/ActionSheet';
 export { default as Msg } from './components/Msg';
+export { default as toptips } from './components/TopTips';

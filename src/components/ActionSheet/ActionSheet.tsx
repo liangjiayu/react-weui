@@ -97,6 +97,7 @@ const ActionSheet: React.FC<ActionSheetProps> = (props) => {
           {actions.map((action, index) => {
             return (
               <ActionSheetItem
+                key={action.key}
                 {...action}
                 onClick={() => {
                   action?.onClick?.();

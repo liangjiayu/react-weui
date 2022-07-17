@@ -29,6 +29,7 @@ export default {
           '/components/Dialog',
           '/components/ActionSheet',
           '/components/Msg',
+          '/components/TopTips',
         ],
       },
     ],

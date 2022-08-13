@@ -32,6 +32,10 @@ export default {
           '/components/TopTips',
         ],
       },
+      {
+        title: '信息录入',
+        children: ['/components/input'],
+      },
     ],
   },
   alias: {
@@ -39,7 +43,8 @@ export default {
   },
   scripts: [
     `if (location.pathname.startsWith('/react-weui/~demos/')) {
-      document.body.style.background = '#f5f5f5'
+      document.body.style.background = '#f5f5f5';
+      document.body.dataset.weuiTheme = 'light';
     }`,
   ],
   styles: [

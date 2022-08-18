@@ -10,3 +10,5 @@ export { default as ActionSheet } from './components/ActionSheet';
 export { default as Msg } from './components/Msg';
 export { default as toptips } from './components/TopTips';
 export { default as Input } from './components/input';
+export { default as Select } from './components/select';
+export { default as Radio } from './components/Radio';

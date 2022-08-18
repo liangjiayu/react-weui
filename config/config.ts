@@ -34,7 +34,11 @@ export default {
       },
       {
         title: '信息录入',
-        children: ['/components/input'],
+        children: [
+          '/components/input',
+          '/components/select',
+          '/components/radio',
+        ],
       },
     ],
   },

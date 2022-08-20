@@ -38,6 +38,7 @@ export default {
           '/components/input',
           '/components/select',
           '/components/radio',
+          '/components/checkbox',
         ],
       },
     ],

@@ -11,4 +11,5 @@ export { default as Msg } from './components/Msg';
 export { default as toptips } from './components/TopTips';
 export { default as Input } from './components/input';
 export { default as Select } from './components/select';
-export { default as Radio } from './components/Radio';
+export { default as Radio } from './components/radio';
+export { default as Checkbox } from './components/checkbox';

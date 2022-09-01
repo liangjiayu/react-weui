@@ -39,6 +39,7 @@ export default {
           '/components/select',
           '/components/radio',
           '/components/checkbox',
+          '/components/switch',
         ],
       },
     ],

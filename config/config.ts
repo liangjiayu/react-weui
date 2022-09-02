@@ -40,7 +40,12 @@ export default {
           '/components/radio',
           '/components/checkbox',
           '/components/switch',
+          '/components/form-layout',
         ],
+      },
+      {
+        title: '信息展示',
+        children: ['/components/footer'],
       },
     ],
   },

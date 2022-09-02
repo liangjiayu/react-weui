@@ -3,12 +3,12 @@ import classNames from 'classnames';
 import { useMergedState } from '../../utils';
 
 export type SwitchProps = {
-  className?: string;
   checked?: boolean;
   defaultChecked?: boolean;
   disabled?: boolean;
   onChange?: (checked: boolean, event: React.ChangeEvent) => void;
   onClick?: (event: React.MouseEvent) => void;
+  className?: string;
   style?: React.CSSProperties;
 };
 

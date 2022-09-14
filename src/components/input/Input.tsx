@@ -1,5 +1,6 @@
 import type { InputHTMLAttributes } from 'react';
 import React, { useRef } from 'react';
+import classNames from 'classnames';
 import { useMergedState } from '../../utils';
 
 export function fixControlledValue<T>(value: T) {
@@ -19,7 +20,7 @@ export type InputProps = {
 const Input: React.FC<InputProps> = (props) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const { clearable, onChange, type = 'text', ...rest } = props;
+  const { clearable, onChange, type = 'text', className, ...rest } = props;
 
   const [value, setValue] = useMergedState<string>({
     value: props.value,
@@ -35,7 +36,9 @@ const Input: React.FC<InputProps> = (props) => {
 
   const handleClear = () => {
     inputRef.current?.focus();
-    setValue('');
+    if (props.value === undefined) {
+      setValue('');
+    }
 
     onChange?.({
       type: 'change-clear',
@@ -45,13 +48,15 @@ const Input: React.FC<InputProps> = (props) => {
     } as any);
   };
 
+  const classes = classNames('weui-input', className);
+
   return (
     <div className="weui-flex">
       <input
         {...rest}
         type={type}
         ref={inputRef}
-        className="weui-input"
+        className={classes}
         value={fixControlledValue(value)}
         onChange={handleChange}
       />

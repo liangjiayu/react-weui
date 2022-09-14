@@ -7,20 +7,45 @@ export type CellsItemProps = {
   extra?: ReactNode;
   arrow?: boolean;
   onClick?: () => void;
+  className?: string;
+  style?: React.CSSProperties;
+  type?: 'div' | 'label' | 'a';
 };
 
 const CellsItem: React.FC<CellsItemProps> = (props) => {
-  const { children, prefix, arrow, extra, onClick } = props;
+  const {
+    children,
+    prefix,
+    arrow,
+    extra,
+    onClick,
+    className,
+    type = 'div',
+    ...restProps
+  } = props;
 
-  return (
-    <div
-      className={classNames('weui-cell', { [`weui-cell_access`]: arrow })}
-      onClick={onClick}
-    >
+  const classes = classNames(
+    'weui-cell',
+    { [`weui-cell_access`]: arrow },
+    className
+  );
+
+  const content = (
+    <>
       {prefix && <div className="weui-cell__hd">{prefix}</div>}
       {children && <div className="weui-cell__bd">{children}</div>}
       {(arrow || extra) && <div className="weui-cell__ft">{extra}</div>}
-    </div>
+    </>
+  );
+
+  return React.createElement(
+    type,
+    {
+      className: classes,
+      onClick: onClick,
+      ...restProps,
+    },
+    content
   );
 };
 

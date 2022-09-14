@@ -1,6 +1,12 @@
 # Input 输入框
 
-<code src="./demos/index.tsx"></code>
+### 基础用法
+
+<code src="./demos/demo1.tsx"></code>
+
+### 布局用法
+
+<code src="./demos/demo2.tsx"></code>
 
 ## API
 

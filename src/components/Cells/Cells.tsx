@@ -2,12 +2,14 @@ import React from 'react';
 
 export type CellsProps = {
   title?: string;
+  className?: string;
+  style?: React.CSSProperties;
 };
 
 const Cells: React.FC<CellsProps> = (props) => {
-  const { title, children } = props;
+  const { title, children, className, style } = props;
   return (
-    <div>
+    <div className={className} style={style}>
       {title && <div className="weui-cells__title">{title}</div>}
       {children && <div className="weui-cells">{children}</div>}
     </div>

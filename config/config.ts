@@ -41,6 +41,7 @@ export default {
           '/components/checkbox',
           '/components/switch',
           '/components/form-layout',
+          '/components/textarea',
         ],
       },
       {

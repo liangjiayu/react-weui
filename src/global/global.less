@@ -7,3 +7,54 @@
     width: 80px;
   }
 }
+
+.padding(@size:5) when(@size <= 100) {
+  .p-@{size} {
+    padding: @size+0px;
+  }
+  .pt-@{size} {
+    padding-top: @size+0px;
+  }
+  .pb-@{size} {
+    padding-bottom: @size+0px;
+  }
+  .pl-@{size} {
+    padding-left: @size+0px;
+  }
+  .pr-@{size} {
+    padding-right: @size+0px;
+  }
+  .padding((@size + 5));
+}
+
+.padding();
+
+.margin(@size:5) when(@size <= 100) {
+  .m-@{size} {
+    margin: @size+0px;
+  }
+  .mt-@{size} {
+    margin-top: @size+0px;
+  }
+  .mb-@{size} {
+    margin-bottom: @size+0px;
+  }
+  .ml-@{size} {
+    margin-left: @size+0px;
+  }
+  .mr-@{size} {
+    margin-right: @size+0px;
+  }
+  .margin((@size + 5));
+}
+
+.margin();
+
+.text(@size:10) when(@size <= 40) {
+  .text-@{size} {
+    font-size: @size+0px;
+  }
+  .text((@size + 1));
+}
+
+.text();

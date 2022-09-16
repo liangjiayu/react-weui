@@ -59,6 +59,7 @@ export default {
       document.body.dataset.weuiTheme = 'light';
     }`,
   ],
+
   styles: [
     ` 
     #root .__dumi-default-mobile-demo-layout {

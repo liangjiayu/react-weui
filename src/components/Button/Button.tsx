@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import './style.less';
 
 type ButtonProps = {
   type?: 'primary' | 'default' | 'warn';
@@ -9,20 +8,41 @@ type ButtonProps = {
   disabled?: boolean;
   loading?: boolean;
   onClick?: () => void;
+  className?: string;
+  style?: React.CSSProperties;
 };
 
 const Button: React.FC<ButtonProps> = (props) => {
-  const { children, type, size, disabled, loading, block, onClick } = props;
+  const {
+    children,
+    type = 'default',
+    size,
+    disabled,
+    loading,
+    block,
+    onClick,
+    className,
+    style,
+    ...restProps
+  } = props;
 
   return (
-    <button
+    <a
+      {...restProps}
+      role="button"
       onClick={onClick}
-      className={classNames('weui-btn', `weui-btn_${type}`, {
-        [`weui-btn_mini`]: size === 'mini',
-        [`weui-btn_disabled`]: disabled,
-        [`weui-btn_block`]: block,
-        [`weui-btn_loading`]: loading,
-      })}
+      className={classNames(
+        block ? 'weui-btn_cell' : 'weui-btn',
+        block ? `weui-btn_cell-${type}` : `weui-btn_${type}`,
+        {
+          [`weui-btn_mini`]: size === 'mini',
+          [`weui-wa-hotarea`]: size === 'mini',
+          [`weui-btn_disabled`]: disabled,
+          [`weui-btn_loading`]: loading,
+        },
+        className
+      )}
+      style={style}
     >
       {loading ? (
         <>
@@ -38,12 +58,8 @@ const Button: React.FC<ButtonProps> = (props) => {
       ) : (
         children
       )}
-    </button>
+    </a>
   );
-};
-
-Button.defaultProps = {
-  type: 'default',
 };
 
 export default Button;

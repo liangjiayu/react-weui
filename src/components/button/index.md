@@ -4,7 +4,13 @@ title: Button 按钮
 
 # Button 按钮
 
+### 普通型
+
 <code src="./demos/demo1.tsx"></code>
+
+### 底部悬浮型
+
+<code src="./demos/demo2.tsx"></code>
 
 ## API
 

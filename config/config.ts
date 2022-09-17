@@ -16,7 +16,7 @@ export default {
       {
         title: '基础组件',
         children: [
-          '/components/Button',
+          '/components/button',
           '/components/Cells',
           '/components/Icon',
           '/components/Flex',

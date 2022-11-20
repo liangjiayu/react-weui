@@ -16,3 +16,4 @@ export { default as Checkbox } from './components/checkbox';
 export { default as Switch } from './components/switch';
 export { default as Footer } from './components/footer';
 export { default as TextArea } from './components/textarea';
+export { default as Slider } from './components/slider';

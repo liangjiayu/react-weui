@@ -42,6 +42,7 @@ export default {
           '/components/switch',
           '/components/form-layout',
           '/components/textarea',
+          '/components/slider',
         ],
       },
       {

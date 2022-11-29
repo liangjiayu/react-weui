@@ -17,3 +17,4 @@ export { default as Switch } from './components/switch';
 export { default as Footer } from './components/footer';
 export { default as TextArea } from './components/textarea';
 export { default as Slider } from './components/slider';
+export { default as Badge } from './components/badge';

@@ -47,7 +47,7 @@ export default {
       },
       {
         title: '信息展示',
-        children: ['/components/footer'],
+        children: ['/components/footer', '/components/badge'],
       },
     ],
   },

@@ -10,6 +10,7 @@ export type CellsItemProps = {
   className?: string;
   style?: React.CSSProperties;
   type?: 'div' | 'label' | 'a';
+  children?: React.ReactNode;
 };
 
 const CellsItem: React.FC<CellsItemProps> = (props) => {

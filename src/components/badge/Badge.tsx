@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import React, { useMemo } from 'react';
 import classNames from 'classnames';
 import './style.less';
@@ -11,6 +12,7 @@ type BadgeProps = {
   offset?: [number, number];
   className?: string;
   style?: React.CSSProperties;
+  children?: ReactNode;
 };
 
 const Badge: React.FC<BadgeProps> = (props) => {

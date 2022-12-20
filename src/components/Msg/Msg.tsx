@@ -9,6 +9,7 @@ type MsgProps = {
   operation?: ReactNode;
   tips?: ReactNode;
   extra?: ReactNode;
+  children?: ReactNode;
 };
 
 const Msg: React.FC<MsgProps> = (props) => {

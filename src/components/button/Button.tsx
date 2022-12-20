@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import React from 'react';
 import classNames from 'classnames';
 
@@ -10,6 +11,7 @@ type ButtonProps = {
   onClick?: () => void;
   className?: string;
   style?: React.CSSProperties;
+  children?: ReactNode;
 };
 
 const Button: React.FC<ButtonProps> = (props) => {

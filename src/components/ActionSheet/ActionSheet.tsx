@@ -11,6 +11,7 @@ type ActionSheetProps = {
   closeOnMaskClick?: boolean;
   onAction?: (action: ActionSheetItemProps, index: number) => void;
   onClose?: () => void;
+  children?: ReactNode;
 };
 
 type ActionSheetItemProps = {

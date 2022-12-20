@@ -4,6 +4,7 @@ export type CellsProps = {
   title?: string;
   className?: string;
   style?: React.CSSProperties;
+  children?: React.ReactNode;
 };
 
 const Cells: React.FC<CellsProps> = (props) => {

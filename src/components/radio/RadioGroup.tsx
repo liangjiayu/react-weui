@@ -10,6 +10,7 @@ export type RadioGroupProps = {
   disabled?: boolean;
   name?: string;
   title?: string;
+  children?: React.ReactNode;
 };
 
 const RadioGroup: React.FC<RadioGroupProps> = (props) => {

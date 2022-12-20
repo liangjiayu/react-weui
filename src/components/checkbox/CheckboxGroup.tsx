@@ -10,6 +10,7 @@ export type CheckboxGroupProps = {
   value?: CheckboxValueType[];
   onChange?: (checkedValue: CheckboxValueType[]) => void;
   disabled?: boolean;
+  children?: React.ReactNode;
 };
 
 const CheckboxGroup: React.FC<CheckboxGroupProps> = (props) => {

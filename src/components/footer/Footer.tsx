@@ -7,6 +7,7 @@ type FooterProps = {
   bottom?: boolean;
   className?: string;
   style?: React.CSSProperties;
+  children?: React.ReactNode;
 };
 
 const Footer: React.FC<FooterProps> = (props) => {

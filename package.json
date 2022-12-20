@@ -29,12 +29,13 @@
     ]
   },
   "dependencies": {
-    "react": "^16.12.0",
+    "@ant-design/icons": "^4.8.0",
+    "react": "^18.0.0",
     "weui": "^2.4.4"
   },
   "devDependencies": {
     "@types/classnames": "^2.3.1",
-    "@types/react": "^16.14.2",
+    "@types/react": "^18.0.0",
     "@umijs/fabric": "^2.8.0",
     "@umijs/test": "^3.0.5",
     "classnames": "^2.3.1",

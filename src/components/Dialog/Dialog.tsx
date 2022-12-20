@@ -15,6 +15,7 @@ export type DialogProps = {
   confirmLoading?: boolean;
   className?: string;
   style?: React.CSSProperties;
+  children?: React.ReactNode;
 };
 
 const Dialog: React.FC<DialogProps> = (props) => {

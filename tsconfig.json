@@ -8,9 +8,9 @@
     "baseUrl": "./",
     "paths": {
       "@@/*": [".dumi/tmp/*"],
-      "react-weui": ["src"],
-      "react-weui/*": ["src/*", "*"]
+      "react-weui": ["components"],
+      "react-weui/*": ["components/*", "*"]
     }
   },
-  "include": [".dumirc.ts", "src/**/*"]
+  "include": [".dumirc.ts", "**/*"]
 }

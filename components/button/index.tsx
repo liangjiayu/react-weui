@@ -1,5 +1,3 @@
-const Button = () => {
-  return <div>Button</div>;
-};
+import Button from './Button';
 
 export default Button;

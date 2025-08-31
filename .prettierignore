@@ -1,10 +1,2 @@
-**/*.svg
-package.json
-.umi
-.umi-production
-.umi-test
-**/dist
-**/docs-dist
-**/lib
-**/es
-package-lock.json
+/dist
+*.yaml

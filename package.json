@@ -55,6 +55,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@tailwindcss/postcss": "^4.1.12",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@umijs/lint": "^4.0.0",
@@ -65,12 +66,14 @@
     "father": "^4.1.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "postcss": "^8.5.6",
     "prettier": "^2.7.1",
     "prettier-plugin-organize-imports": "^3.0.0",
     "prettier-plugin-packagejson": "^2.2.18",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "stylelint": "^14.9.1"
+    "stylelint": "^14.9.1",
+    "tailwindcss": "^4.1.12"
   },
   "dependencies": {
     "weui": "^2.6.22"

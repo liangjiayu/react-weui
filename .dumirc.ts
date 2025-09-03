@@ -6,7 +6,7 @@ export default defineConfig({
   // themeConfig: {
   //   name: 'react-weui',
   // },
-  // mfsu: false,
+  mfsu: true,
   // mako: {},
   resolve: {
     docDirs: [{ type: 'doc', dir: 'docs' }],

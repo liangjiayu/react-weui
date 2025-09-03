@@ -8,9 +8,9 @@ title: Button 按钮
 
 <code src="./demo/demo1.tsx"></code>
 
-<!-- ### 底部悬浮型
+### 底部悬浮型
 
-<code src="./demos/demo2.tsx"></code> -->
+<code src="./demo/demo2.tsx"></code>
 
 ## API
 

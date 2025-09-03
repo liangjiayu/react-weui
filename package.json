@@ -53,6 +53,7 @@
     "react-dom": ">=16.9.0"
   },
   "devDependencies": {
+    "@ant-design/icons": "^6.0.0",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@tailwindcss/postcss": "^4.1.12",

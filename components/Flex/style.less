@@ -1,0 +1,76 @@
+// row
+
+.weui-row {
+  display: flex;
+  flex-flow: row wrap;
+
+  &--nowrap {
+    flex-wrap: nowrap;
+  }
+
+  &--align-top {
+    align-items: flex-start;
+  }
+
+  &--align-center {
+    align-items: center;
+  }
+
+  &--align-bottom {
+    align-items: flex-end;
+  }
+
+  &--justify-start {
+    justify-content: start;
+  }
+
+  &--justify-center {
+    justify-content: center;
+  }
+
+  &--justify-end {
+    justify-content: end;
+  }
+
+  &--justify-space-around {
+    justify-content: space-around;
+  }
+
+  &--justify-space-between {
+    justify-content: space-between;
+  }
+}
+
+//  col
+.weui-col {
+  position: relative;
+  max-width: 100%;
+  min-height: 1px;
+}
+
+.loop-grid-columns(@index) when (@index > 0) {
+  .weui-col--@{index} {
+    display: block;
+    flex: 0 0 percentage((@index / 24));
+    max-width: percentage((@index / 24));
+  }
+  .weui-col--offset-@{index} {
+    margin-left: percentage((@index / 24));
+  }
+  .loop-grid-columns((@index - 1));
+}
+
+.loop-grid-columns(@index) when (@index =  0 ) {
+  .weui-col--@{index} {
+    display: none;
+  }
+  .weui-col--offset-@{index} {
+    margin-left: 0;
+  }
+}
+
+.make-grid() {
+  .loop-grid-columns(24);
+}
+
+.make-grid();

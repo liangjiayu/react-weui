@@ -18,7 +18,7 @@ export default defineConfig({
   },
   scripts: [
     `if (location.pathname.startsWith('/~demos/')) {
-      // document.body.style.background = '#f5f5f5';
+      document.body.style.background = '#f5f5f5';
       document.body.dataset.weuiTheme = 'light';
     }`,
   ],

@@ -1,0 +1,109 @@
+@import (reference) '../../styles/variables.less';
+
+.@{prefix}-previewer {
+  @media @desktop {
+    --device-width: @device-width;
+
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+
+    .dumi-default-previewer {
+      &-demo {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border-inline-start: solid 1px @c-border-light;
+        padding: 0;
+
+        @{dark-selector} & {
+          border-inline-start-color: @c-border-less-dark;
+        }
+      }
+
+      &-meta {
+        position: absolute;
+        margin-inline-end: 1px;
+        top: 0;
+        inset-inline: 0 var(--device-width);
+        bottom: 0;
+        display: flex;
+        align-self: stretch;
+        flex-direction: column;
+        border-top: 0;
+      }
+
+      &-actions {
+        position: absolute;
+        top: 6px;
+        inset-inline-end: 20px;
+        border-bottom: 0;
+
+        &:first-child + .dumi-default-previewer-sources {
+          border-top: 1px dashed @c-border-light;
+          margin-top: 42px;
+          overflow: auto;
+          @{dark-selector} & {
+            border-top-color: @c-border-less-dark;
+          }
+        }
+      }
+
+      &-sources {
+        flex: 1;
+        height: 0;
+      }
+
+      &-tabs {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .dumi-default-tabs {
+          &-content,
+          &-tabpane {
+            height: 100%;
+          }
+
+          &-content-holder {
+            flex: 1;
+            overflow: auto;
+          }
+        }
+      }
+
+      &-action-btn > svg {
+        width: 17px;
+      }
+
+      &-desc {
+        > h5 {
+          position: static;
+          display: block;
+          padding: 14px 24px;
+          background: transparent;
+          border-bottom: 1px dashed @c-border-light;
+
+          @{dark-selector} & {
+            border-bottom-color: @c-border-less-dark;
+          }
+        }
+
+        > .markdown {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .dumi-default-source-code {
+      height: 100%;
+      flex: 1;
+      min-height: 0;
+      overflow: auto;
+      border-bottom-right-radius: 0;
+
+      &-editor {
+        height: 100%;
+      }
+    }
+  }
+}

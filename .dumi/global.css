@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+/* @import 'tailwindcss';
 
 @layer base {
   @import 'weui';
@@ -33,4 +33,7 @@
   color: var(--weui-FG-1);
   text-align: left;
   font-size: 14px;
-}
+} */
+
+
+ @import 'weui';

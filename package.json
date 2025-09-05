@@ -1,21 +1,19 @@
 {
   "name": "react-weui",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "description": "A react library developed with dumi",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "start": "npm run dev",
     "dev": "dumi dev",
     "build": "father build",
-    "build:watch": "father dev",
     "docs:build": "dumi build",
     "docs:preview": "dumi preview",
-    "prepare": "husky install && dumi setup",
+    "prepare": "husky && dumi setup",
     "doctor": "father doctor",
-    "lint": "npm run lint:es && npm run lint:css",
-    "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
-    "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
     "prepublishOnly": "father doctor && npm run build"
   },
   "authors": [],
@@ -23,61 +21,33 @@
   "files": [
     "dist"
   ],
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
   "lint-staged": {
-    "*.{md,json}": [
-      "prettier --write --no-error-on-unmatched-pattern"
-    ],
-    "*.{css,less}": [
-      "stylelint --fix",
-      "prettier --write"
-    ],
-    "*.{js,jsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{ts,tsx}": [
-      "eslint --fix",
-      "prettier --parser=typescript --write"
+    "*.{ts,tsx,js,jsx,json,css}": [
+      "biome check --write --no-errors-on-unmatched"
     ]
   },
   "publishConfig": {
     "access": "public"
   },
   "peerDependencies": {
-    "react": ">=16.9.0",
-    "react-dom": ">=16.9.0"
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^6.0.0",
+    "weui": "^2.6.22"
   },
   "devDependencies": {
-    "@ant-design/icons": "^6.0.0",
-    "@commitlint/cli": "^17.1.2",
-    "@commitlint/config-conventional": "^17.1.0",
-    "@tailwindcss/postcss": "^4.1.12",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "@umijs/lint": "^4.0.0",
     "classnames": "^2.5.1",
     "dumi": "^2.4.13",
     "dumi-theme-antd": "^0.4.4",
-    "eslint": "^8.23.0",
     "father": "^4.1.0",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "postcss": "^8.5.6",
-    "prettier": "^2.7.1",
-    "prettier-plugin-organize-imports": "^3.0.0",
-    "prettier-plugin-packagejson": "^2.2.18",
+    "husky": "^9.0.0",
+    "lint-staged": "^16.0.0",
     "qrcode.react": "^3.1.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "stylelint": "^14.9.1",
-    "tailwindcss": "^4.1.12"
-  },
-  "dependencies": {
-    "weui": "^2.6.22"
+    "react-dom": "^18.0.0"
   }
 }

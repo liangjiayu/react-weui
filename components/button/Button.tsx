@@ -1,6 +1,6 @@
+import classNames from 'classnames';
 import type { ReactNode } from 'react';
 import React from 'react';
-import classNames from 'classnames';
 
 type ButtonProps = {
   type?: 'primary' | 'default' | 'warn';
@@ -42,7 +42,7 @@ const Button: React.FC<ButtonProps> = (props) => {
           [`weui-btn_disabled`]: disabled,
           [`weui-btn_loading`]: loading,
         },
-        className
+        className,
       )}
       style={style}
     >

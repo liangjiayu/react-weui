@@ -38,6 +38,7 @@
     "weui": "^2.6.22"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.2.3",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "classnames": "^2.5.1",
@@ -48,6 +49,7 @@
     "lint-staged": "^16.0.0",
     "qrcode.react": "^3.1.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "typescript": "^5.9.2"
   }
 }

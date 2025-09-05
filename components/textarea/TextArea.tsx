@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import type { TextareaHTMLAttributes } from 'react';
 import React from 'react';
-import { useMergedState } from 'react-weui/_utils';
+import { useMergedState } from '../_utils';
 
 export type TextAreaProps = {
   defaultValue?: string;

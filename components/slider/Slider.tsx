@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React, { useRef } from 'react';
-import { useMergedState } from 'react-weui/_utils';
+import { useMergedState } from '../_utils';
 import './style.less';
 
 type SliderProps = {

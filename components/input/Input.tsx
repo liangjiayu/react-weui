@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import type { InputHTMLAttributes } from 'react';
 import React, { useRef } from 'react';
-import { useMergedState } from 'react-weui/_utils';
+import { useMergedState } from '../_utils';
 
 export function fixControlledValue<T>(value: T) {
   if (typeof value === 'undefined' || value === null) {

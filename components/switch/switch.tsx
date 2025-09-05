@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
-import { useMergedState } from 'react-weui/_utils';
+import { useMergedState } from '../_utils';
 
 export type SwitchProps = {
   checked?: boolean;

@@ -1,5 +1,8 @@
 ---
-title: Slider 滑块
+group:
+  title: 数据录入
+  order: 3
+title: 滑块
 ---
 
 # Slider 滑块

@@ -1,3 +1,10 @@
+---
+group:
+  title: 数据录入
+  order: 3
+title: 开关
+---
+
 # Switch 开关
 
 <code src="./demos/index.tsx"></code>

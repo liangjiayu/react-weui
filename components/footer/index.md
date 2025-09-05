@@ -1,3 +1,10 @@
+---
+group: 
+  title: 布局
+  order: 1
+title: 页脚
+---
+
 # Footer 页脚
 
 <code src="./demos/index.tsx"></code>

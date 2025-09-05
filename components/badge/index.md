@@ -1,5 +1,8 @@
 ---
-title: Badge  徽标
+group:
+  title: 数据展示
+  order: 2
+title: 徽标
 ---
 
 # Badge 徽标

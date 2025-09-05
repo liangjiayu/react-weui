@@ -1,3 +1,10 @@
+---
+group:
+  title: 数据展示
+  order: 2
+title: 九宫格
+---
+
 # Grid 九宫格
 
 <code src="./demos/demo1.tsx"></code>

@@ -1,3 +1,10 @@
+---
+group:
+  title: 数据录入
+  order: 3
+title: Checkbox 多选框
+---
+
 # Checkbox 多选框
 
 <code src="./demos/index.tsx"></code>

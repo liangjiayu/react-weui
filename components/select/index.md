@@ -1,3 +1,10 @@
+---
+group:
+  title: 数据录入
+  order: 3
+title: 选择框
+---
+
 # Select 选择框
 
 <code src="./demos/demo1.tsx"></code>

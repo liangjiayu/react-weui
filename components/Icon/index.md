@@ -1,3 +1,10 @@
+---
+group:
+  title: 数据展示
+  order: 2
+title: 图标
+---
+
 # Icon 图标
 
 <code src="./demos/index.tsx"></code>

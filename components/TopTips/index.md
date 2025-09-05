@@ -1,3 +1,10 @@
+---
+group:
+  title: 反馈
+  order: 4
+title: 顶部提示条
+---
+
 # TopTips 顶部提示条
 
 <code src="./demos/index.tsx"></code>

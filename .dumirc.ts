@@ -6,8 +6,8 @@ export default defineConfig({
   // themeConfig: {
   //   name: 'react-weui',
   // },
-  mfsu: true,
-  // mako: {},
+  // mfsu: true,
+  mako: {},
   resolve: {
     docDirs: [{ type: 'doc', dir: 'docs' }],
     atomDirs: [{ type: 'component', dir: 'components' }],
@@ -22,11 +22,13 @@ export default defineConfig({
       document.body.dataset.weuiTheme = 'light';
     }`,
   ],
-  extraPostCSSPlugins: ['@tailwindcss/postcss'],
   themeConfig: {
-    hd: {
-      rules: [
-        // {mode: 'vw', options: [100, 750]}
+    sidebarGroupModePath: ['/components', '/guide'],
+    nav: {
+      'zh-CN': [
+        { title: '指南', link: '/docs/guide/quick-start' },
+        { title: '组件', link: '/components/button' },
+        { title: '示例', link: '/demo/secondary-sidebar-colors' },
       ],
     },
   },

@@ -1,3 +1,10 @@
+---
+group:
+  title: 数据展示
+  order: 2
+title: 提示页
+---
+
 # Msg 提示页
 
 <code src="./demos/index.tsx"></code>

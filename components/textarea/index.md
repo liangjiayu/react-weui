@@ -1,3 +1,10 @@
+---
+group:
+  title: 数据录入
+  order: 3
+title: 文本域
+---
+
 # TextArea 文本域
 
 <code src="./demos/demo1.tsx"></code>

@@ -1,3 +1,10 @@
+---
+group:
+  title: 反馈
+  order: 4
+title: 弹窗
+---
+
 # Dialog 弹窗
 
 <code src="./demos/index.tsx"></code>

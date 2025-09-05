@@ -1,3 +1,10 @@
+---
+group:
+  title: 数据录入
+  order: 3
+title: 输入框
+---
+
 # Input 输入框
 
 ### 基础用法

@@ -1,5 +1,5 @@
-import React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 import RowContext from './RowContext';
 
 export type RowProps = {
@@ -32,7 +32,7 @@ const Row: React.FC<RowProps> = (props) => {
     `weui-row--align-${align}`,
     `weui-row--justify-${justify}`,
     {
-      ['weui-row--nowrap']: wrap === false,
+      'weui-row--nowrap': wrap === false,
     },
     className,
   );

@@ -1,6 +1,6 @@
+import classNames from 'classnames';
 import type { ReactNode } from 'react';
 import React, { useMemo } from 'react';
-import classNames from 'classnames';
 import './style.less';
 
 type BadgeProps = {
@@ -48,10 +48,10 @@ const Badge: React.FC<BadgeProps> = (props) => {
     typeof count === 'object'
       ? // @ts-ignore
         React.cloneElement(count, {
-          // @ts-ignore
+          // @ts-expect-error
           style: { ...count?.props?.style, ...mergedStyle },
           className: classNames(
-            // @ts-ignore
+            // @ts-expect-error
             count?.props?.className,
             {
               'weui-badge--fixed': Boolean(children),

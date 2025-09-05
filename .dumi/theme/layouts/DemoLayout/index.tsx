@@ -4,7 +4,7 @@ import './DemoLayout.less';
 
 export const ROUTE_MSG_TYPE = 'dumi:update-iframe-route';
 
-const DemoLayout: React.FC = ({}) => {
+const DemoLayout: React.FC = () => {
   const target = useRef<HTMLDivElement>(null);
   const outlet = useOutlet();
 

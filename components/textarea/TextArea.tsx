@@ -1,6 +1,6 @@
+import classNames from 'classnames';
 import type { TextareaHTMLAttributes } from 'react';
 import React from 'react';
-import classNames from 'classnames';
 import { useMergedState } from 'react-weui/_utils';
 
 export type TextAreaProps = {
@@ -12,8 +12,7 @@ export type TextAreaProps = {
 } & TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 const TextArea: React.FC<TextAreaProps> = (props) => {
-  const { children, onChange, className, maxLength, showCount, ...restProps } =
-    props;
+  const { onChange, className, maxLength, showCount, ...restProps } = props;
 
   const [value, setValue] = useMergedState<string>({
     value: props.value,

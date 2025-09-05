@@ -1,5 +1,5 @@
-import React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 
 type FooterProps = {
   links?: React.ReactNode;
@@ -16,7 +16,7 @@ const Footer: React.FC<FooterProps> = (props) => {
   const classes = classNames(
     'weui-footer',
     {
-      [`weui-footer_fixed-bottom`]: bottom,
+      'weui-footer_fixed-bottom': bottom,
     },
     className,
   );

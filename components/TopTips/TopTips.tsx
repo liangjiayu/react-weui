@@ -1,6 +1,6 @@
+import classNames from 'classnames';
 import type { ReactNode } from 'react';
 import React, { useEffect } from 'react';
-import classNames from 'classnames';
 
 export type TopTipsProps = {
   type?: 'success' | 'info' | 'warning' | 'warn';

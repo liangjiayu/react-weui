@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-weui';
+import { Col, Row } from 'react-weui';
 import DemoBlock from 'react-weui/_demos/DemoBlock';
 import './index.less';
 

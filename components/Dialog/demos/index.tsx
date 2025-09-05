@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Dialog, Button } from 'react-weui';
+import { Button, Dialog } from 'react-weui';
 import DemoBlock from 'react-weui/_demos/DemoBlock';
 
 function sleep(time: number) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve, _reject) => {
     setTimeout(resolve, time);
   });
 }

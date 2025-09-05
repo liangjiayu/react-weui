@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cells, Button, Select, Input } from 'react-weui';
+import { Button, Cells, Input, Select } from 'react-weui';
 
 export default () => {
   return (

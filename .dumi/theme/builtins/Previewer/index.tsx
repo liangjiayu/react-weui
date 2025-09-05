@@ -1,7 +1,12 @@
-import { IPreviewerProps, useLocale, useRouteMeta, useSiteData } from 'dumi';
+import {
+  type IPreviewerProps,
+  useLocale,
+  useRouteMeta,
+  useSiteData,
+} from 'dumi';
 import Previewer from 'dumi/theme-default/builtins/Previewer';
+import React, { type FC, useCallback, useEffect, useState } from 'react';
 import Device from '../../slots/Device';
-import React, { useCallback, useEffect, useState, type FC } from 'react';
 import './index.less';
 
 const MobilePreviewer: FC<IPreviewerProps> = (props) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Msg, Button } from 'react-weui';
+import { Button, Msg } from 'react-weui';
 import DemoBlock from 'react-weui/_demos/DemoBlock';
 
 export default () => {

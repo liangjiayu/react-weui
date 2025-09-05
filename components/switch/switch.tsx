@@ -1,5 +1,5 @@
-import React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 import { useMergedState } from 'react-weui/_utils';
 
 export type SwitchProps = {

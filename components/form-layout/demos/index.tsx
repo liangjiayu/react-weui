@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button, Cells, Input } from 'react-weui';
-import { Footer } from 'react-weui';
+import { Button, Cells, Footer, Input } from 'react-weui';
 import './styles.less';
 
 export default () => {
@@ -52,11 +51,9 @@ export default () => {
         <div className="weui-form__extra-area">
           <Footer
             links={
-              <>
-                <a className="weui-footer__link" href="javascript:">
-                  底部链接文本
-                </a>
-              </>
+              <a className="weui-footer__link" href="javascript:">
+                底部链接文本
+              </a>
             }
             text="Copyright © 2008-2019 weui.io"
           />

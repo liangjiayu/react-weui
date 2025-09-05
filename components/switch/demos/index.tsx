@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import DemoBlock from '../../_demos/DemoBlock';
 import { Switch } from 'react-weui';
+import DemoBlock from '../../_demos/DemoBlock';
 
 export default () => {
   const [checked, setChecked] = useState(false);

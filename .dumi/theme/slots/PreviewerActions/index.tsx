@@ -2,10 +2,10 @@ import { useRouteMeta } from 'dumi';
 import PreviewerActions from 'dumi/theme-default/slots/PreviewerActions';
 import QRCode from 'qrcode.react';
 import React, {
-  useEffect,
-  useState,
   type ComponentProps,
   type FC,
+  useEffect,
+  useState,
 } from 'react';
 import './index.less';
 
@@ -33,6 +33,7 @@ const MobilePreviewerActions: FC<IPreviewerActionsProps> = (props) => {
             fill="currentColor"
             viewBox="0 0 16 16"
           >
+            <title>qr-code</title>
             <path d="M2 2h2v2H2z" />
             <path d="M6 0v6H0V0zM5 1H1v4h4zM4 12H2v2h2z" />
             <path d="M6 10v6H0v-6zm-5 1v4h4v-4zm11-9h2v2h-2z" />

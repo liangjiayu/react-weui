@@ -1,7 +1,7 @@
 import type { InputHTMLAttributes } from 'react';
 import React from 'react';
-import CheckboxGroupContext from './CheckboxGroupContext';
 import { useMergedState } from '../_utils';
+import CheckboxGroupContext from './CheckboxGroupContext';
 import type { CheckboxChangeEvent } from './index';
 
 export type CheckboxProps = {

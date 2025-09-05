@@ -1,6 +1,6 @@
+import classNames from 'classnames';
 import type { InputHTMLAttributes } from 'react';
 import React, { useRef } from 'react';
-import classNames from 'classnames';
 import { useMergedState } from 'react-weui/_utils';
 
 export function fixControlledValue<T>(value: T) {
@@ -61,7 +61,7 @@ const Input: React.FC<InputProps> = (props) => {
         onChange={handleChange}
       />
       {clearable && (
-        <button className="weui-btn_reset weui-btn_icon weui-btn_input-clear">
+        <div className="weui-btn_reset weui-btn_icon weui-btn_input-clear">
           <i
             className="weui-icon-clear"
             onClick={handleClear}
@@ -69,7 +69,7 @@ const Input: React.FC<InputProps> = (props) => {
               e.preventDefault();
             }}
           />
-        </button>
+        </div>
       )}
     </div>
   );

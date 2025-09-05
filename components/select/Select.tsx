@@ -1,6 +1,6 @@
+import classNames from 'classnames';
 import type { SelectHTMLAttributes } from 'react';
 import React from 'react';
-import classNames from 'classnames';
 import { useMergedState } from '../_utils';
 
 export type SelectProps = {

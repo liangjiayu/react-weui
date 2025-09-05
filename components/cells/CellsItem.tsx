@@ -1,6 +1,6 @@
+import classNames from 'classnames';
 import type { ReactNode } from 'react';
 import React from 'react';
-import classNames from 'classnames';
 
 export type CellsItemProps = {
   prefix?: ReactNode;
@@ -27,7 +27,7 @@ const CellsItem: React.FC<CellsItemProps> = (props) => {
 
   const classes = classNames(
     'weui-cell',
-    { [`weui-cell_access`]: arrow },
+    { 'weui-cell_access': arrow },
     className,
   );
 

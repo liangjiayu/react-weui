@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
 import classNames from 'classnames';
+import React, { useRef } from 'react';
 import { useMergedState } from 'react-weui/_utils';
 import './style.less';
 

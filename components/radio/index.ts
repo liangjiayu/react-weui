@@ -7,7 +7,7 @@ interface CompoundedComponent extends React.FC<RadioProps> {
   Group: typeof RadioGroup;
 }
 
-// @ts-ignore
+// @ts-expect-error
 export interface RadioChangeEvent extends ChangeEvent<HTMLInputElement> {
   target: {
     value: any;

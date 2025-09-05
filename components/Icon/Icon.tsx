@@ -1,5 +1,5 @@
-import React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 
 type IconProps = {
   type?: 'success' | 'info' | 'warn' | 'waiting';

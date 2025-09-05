@@ -7,7 +7,7 @@ interface CompoundedComponent extends React.FC<CheckboxProps> {
   Group: typeof CheckboxGroup;
 }
 
-// @ts-ignore
+// @ts-expect-error
 export interface CheckboxChangeEvent extends ChangeEvent<HTMLInputElement> {
   target: {
     value: any;

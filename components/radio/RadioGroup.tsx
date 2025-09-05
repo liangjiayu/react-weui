@@ -1,7 +1,7 @@
 import React from 'react';
-import RadioGroupContext from './RadioGroupContext';
 import { useMergedState } from '../_utils';
 import type { RadioChangeEvent } from './index';
+import RadioGroupContext from './RadioGroupContext';
 
 export type RadioGroupProps = {
   defaultValue?: any;

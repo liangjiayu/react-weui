@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import Dialog from './Dialog';
 
@@ -78,9 +78,7 @@ const renderDialog = (config: DialogFuncProps, showCancel: boolean) => {
             : undefined
         }
         onOk={() => {
-          let returnValue: any;
-          // eslint-disable-next-line prefer-const
-          returnValue = currentConfig.onOk();
+          const returnValue = currentConfig.onOk() as any;
           if (!returnValue) {
             close();
             return;

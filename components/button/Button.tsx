@@ -37,10 +37,10 @@ const Button: React.FC<ButtonProps> = (props) => {
         block ? 'weui-btn_cell' : 'weui-btn',
         block ? `weui-btn_cell-${type}` : `weui-btn_${type}`,
         {
-          [`weui-btn_mini`]: size === 'mini',
-          [`weui-wa-hotarea`]: size === 'mini',
-          [`weui-btn_disabled`]: disabled,
-          [`weui-btn_loading`]: loading,
+          'weui-btn_mini': size === 'mini',
+          'weui-wa-hotarea': size === 'mini',
+          'weui-btn_disabled': disabled,
+          'weui-btn_loading': loading,
         },
         className,
       )}
@@ -50,7 +50,7 @@ const Button: React.FC<ButtonProps> = (props) => {
         <>
           <span
             className={classNames('weui-primary-loading', {
-              ['weui-primary-loading_transparent']: type === 'primary',
+              'weui-primary-loading_transparent': type === 'primary',
             })}
           >
             <i className="weui-primary-loading__dot" />

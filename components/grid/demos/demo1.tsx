@@ -1,10 +1,10 @@
-import React from 'react';
-import { Grid } from 'react-weui';
 import {
   AndroidOutlined,
   AppleOutlined,
   WindowsOutlined,
 } from '@ant-design/icons';
+import React from 'react';
+import { Grid } from 'react-weui';
 
 export default () => {
   return (
@@ -41,32 +41,32 @@ export default () => {
           },
           {
             key: '4',
-            icon: <img src="https://weui.io/images/icon_tabbar.png" />,
+            icon: <img src="https://weui.io/images/icon_tabbar.png" alt="" />,
             label: 'Grid',
           },
           {
             key: '5',
-            icon: <img src="https://weui.io/images/icon_tabbar.png" />,
+            icon: <img src="https://weui.io/images/icon_tabbar.png" alt="" />,
             label: 'Grid',
           },
           {
             key: '6',
-            icon: <img src="https://weui.io/images/icon_tabbar.png" />,
+            icon: <img src="https://weui.io/images/icon_tabbar.png" alt="" />,
             label: 'Grid',
           },
           {
             key: '7',
-            icon: <img src="https://weui.io/images/icon_tabbar.png" />,
+            icon: <img src="https://weui.io/images/icon_tabbar.png" alt="" />,
             label: 'Grid',
           },
           {
             key: '8',
-            icon: <img src="https://weui.io/images/icon_tabbar.png" />,
+            icon: <img src="https://weui.io/images/icon_tabbar.png" alt="" />,
             label: 'Grid',
           },
           {
             key: '9',
-            icon: <img src="https://weui.io/images/icon_tabbar.png" />,
+            icon: <img src="https://weui.io/images/icon_tabbar.png" alt="" />,
             label: 'Grid',
           },
         ]}

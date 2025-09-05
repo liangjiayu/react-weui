@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export const useMergedState = <T>({
   value,
@@ -11,7 +11,7 @@ export const useMergedState = <T>({
 
   //  ======  Init   ======
   const [val, setVal] = useState<T>(() => {
-    let finalValue = undefined;
+    let finalValue;
     if (value !== undefined) {
       finalValue = value;
     } else if (defaultValue !== undefined) {

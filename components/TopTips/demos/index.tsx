@@ -1,5 +1,5 @@
 import React from 'react';
-import { toptips, Button } from 'react-weui';
+import { Button, toptips } from 'react-weui';
 import DemoBlock from 'react-weui/_demos/DemoBlock';
 
 export default () => {

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
+import React, { useEffect, useState } from 'react';
 
 export type ToastProps = {
   icon?: 'success' | 'warn' | 'loading';
@@ -24,7 +24,7 @@ const Toast: React.FC<ToastProps> = (props) => {
 
   useEffect(() => {
     if (duration > 0) {
-      // @ts-ignore
+      // @ts-expect-error
       timer = setTimeout(() => {
         setVisible(false);
         onClose();

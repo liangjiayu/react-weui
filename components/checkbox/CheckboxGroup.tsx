@@ -1,7 +1,7 @@
 import React from 'react';
-import CheckboxGroupContext from './CheckboxGroupContext';
 import { useMergedState } from '../_utils';
-import type { CheckboxValueType, CheckboxOptionType } from './index';
+import CheckboxGroupContext from './CheckboxGroupContext';
+import type { CheckboxOptionType, CheckboxValueType } from './index';
 
 export type CheckboxGroupProps = {
   title?: string;

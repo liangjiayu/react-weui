@@ -10,11 +10,9 @@ export default () => {
 
       <Footer
         links={
-          <>
-            <a href="javascript:" className="weui-footer__link weui-wa-hotarea">
-              底部链接
-            </a>
-          </>
+          <a href="javascript:" className="weui-footer__link weui-wa-hotarea">
+            底部链接
+          </a>
         }
         text="Copyright © 2008-2022 weui.io"
       />

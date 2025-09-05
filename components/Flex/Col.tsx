@@ -17,7 +17,7 @@ const Col: React.FC<ColProps> = (props) => {
       [`weui-col--${span}`]: span !== undefined,
       [`weui-col--offset-${offset}`]: offset,
     },
-    className
+    className,
   );
 
   const { gutter } = useContext(RowContext);

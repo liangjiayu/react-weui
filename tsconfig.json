@@ -21,7 +21,7 @@
     /* Others */
     "paths": {
       "@@/*": [".dumi/tmp/*"],
-      "react-weui": ["components"],
+      "react-weui": ["components"]
     }
   },
   "include": [".dumirc.ts", "**/*"],

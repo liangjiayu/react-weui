@@ -43,7 +43,7 @@ const ActionSheetItem: React.FC<ActionSheetItemProps> = (props) => {
           'weui-actionsheet__cell_disabled': disabled,
           'weui-actionsheet__cell_warn': warn,
         },
-        className
+        className,
       )}
       onClick={() => {
         if (!disabled) {

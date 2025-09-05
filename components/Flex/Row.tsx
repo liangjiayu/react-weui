@@ -34,7 +34,7 @@ const Row: React.FC<RowProps> = (props) => {
     {
       ['weui-row--nowrap']: wrap === false,
     },
-    className
+    className,
   );
 
   const rowStyle: React.CSSProperties = {};

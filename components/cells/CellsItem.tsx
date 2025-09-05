@@ -28,7 +28,7 @@ const CellsItem: React.FC<CellsItemProps> = (props) => {
   const classes = classNames(
     'weui-cell',
     { [`weui-cell_access`]: arrow },
-    className
+    className,
   );
 
   const content = (
@@ -46,7 +46,7 @@ const CellsItem: React.FC<CellsItemProps> = (props) => {
       onClick: onClick,
       ...restProps,
     },
-    content
+    content,
   );
 };
 

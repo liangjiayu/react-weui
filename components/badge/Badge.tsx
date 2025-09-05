@@ -57,7 +57,7 @@ const Badge: React.FC<BadgeProps> = (props) => {
               'weui-badge--fixed': Boolean(children),
               'weui-badge_dot': dot,
             },
-            className
+            className,
           ),
         })
       : undefined;
@@ -100,7 +100,7 @@ const Badge: React.FC<BadgeProps> = (props) => {
               'weui-badge--fixed': Boolean(children),
               'weui-badge_dot': dot,
             },
-            className
+            className,
           )}
         >
           {displayCount}

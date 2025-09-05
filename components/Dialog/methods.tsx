@@ -61,7 +61,7 @@ const renderDialog = (config: DialogFuncProps, showCancel: boolean) => {
       () => {
         currentConfig.confirmLoading = false;
         close();
-      }
+      },
     );
   }
 
@@ -92,7 +92,7 @@ const renderDialog = (config: DialogFuncProps, showCancel: boolean) => {
           handlePromiseOnOk(returnValue);
         }}
       />,
-      div
+      div,
     );
   }
 

@@ -18,7 +18,7 @@ const Footer: React.FC<FooterProps> = (props) => {
     {
       [`weui-footer_fixed-bottom`]: bottom,
     },
-    className
+    className,
   );
 
   return (

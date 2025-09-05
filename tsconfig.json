@@ -4,6 +4,7 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "bundler",
+    "declaration": true,
     "baseUrl": "./",
 
     /* Linting */
@@ -15,13 +16,12 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "noEmit": true,
     "resolveJsonModule": true,
 
     /* Others */
     "paths": {
       "@@/*": [".dumi/tmp/*"],
-      "react-weui": ["components"]
+      "react-weui": ["components/index.ts"]
     }
   },
   "include": [".dumirc.ts", "**/*"],

@@ -72,6 +72,7 @@ const Badge: React.FC<BadgeProps> = (props) => {
     if (!count) {
       return null;
     }
+    // @ts-expect-error
     if (overflowCount && count > overflowCount) {
       return `${overflowCount}+`;
     }

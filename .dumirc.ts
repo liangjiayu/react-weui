@@ -3,10 +3,6 @@ import { defineConfig } from 'dumi';
 
 export default defineConfig({
   outputPath: '_site',
-  // themeConfig: {
-  //   name: 'react-weui',
-  // },
-  // mfsu: true,
   mako: {},
   resolve: {
     docDirs: [{ type: 'doc', dir: 'docs' }],

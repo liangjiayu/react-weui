@@ -27,5 +27,9 @@ export default defineConfig({
         { title: '示例', link: '/demo/secondary-sidebar-colors' },
       ],
     },
+    rtl: false,
+    prefersColor: {
+      switch: false,
+    },
   },
 });

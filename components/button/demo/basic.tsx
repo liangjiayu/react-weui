@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button } from 'react-weui';
 
 export default () => {
@@ -27,21 +26,30 @@ export default () => {
           警示操作
         </Button>
       </div>
-      <div className="my-4">
-        <Button block>普通行按钮</Button>
-        <Button block type="primary">
-          强调行按钮
+      <div className="p-4">
+        <Button type="primary" block>
+          块型按钮
         </Button>
-        <Button block type="warn">
-          警示行按钮
+        <Button block>块型按钮</Button>
+        <Button type="warn" block>
+          块型按钮
         </Button>
       </div>
-      <div className="flex p-4 my-4">
-        <Button type="primary" size="mini">
+      <div className="p-4">
+        <Button size="medium" type="primary">
+          中型按钮
+        </Button>
+        <Button size="medium">中型按钮</Button>
+        <Button size="medium" type="warn">
+          中型按钮
+        </Button>
+      </div>
+      <div className="p-4 flex my-4">
+        <Button size="mini" type="primary">
           按钮
         </Button>
         <Button size="mini">按钮</Button>
-        <Button type="warn" size="mini">
+        <Button size="mini" type="warn">
           按钮
         </Button>
       </div>

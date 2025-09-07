@@ -7,7 +7,7 @@ export { default as Dialog } from './Dialog';
 export { Col, Row } from './Flex';
 export { default as Footer } from './footer';
 export { default as Grid } from './grid';
-export { default as Icon } from './Icon';
+export { default as Icon } from './icon';
 export { default as Input } from './input';
 export { default as Msg } from './Msg';
 export { default as Radio } from './radio';

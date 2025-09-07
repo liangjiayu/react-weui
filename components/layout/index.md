@@ -1,11 +1,11 @@
 ---
-group: 
-  title: 通用
-  order: 0
-title: 弹性布局
+group:
+  title: 布局
+  order: 1
+title: Layout 栅格布局
 ---
 
-# Flex 弹性布局
+# Layout 栅格布局
 
 <code src="./demos/index.tsx"></code>
 

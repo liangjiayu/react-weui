@@ -1,7 +1,7 @@
 ---
 group:
   title: 通用
-  order: 2
+  order: 0
 title: Icon 图标
 ---
 

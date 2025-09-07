@@ -21,57 +21,45 @@ export default () => {
       }}
     >
       <div className="page__hd">
-        <div className="page__title">List</div>
-        <div className="page__desc">列表</div>
+        <div className="page__title">Cells</div>
+        <div className="page__desc">单元格</div>
       </div>
 
       <Cells title="带说明的列表项">
-        <Cells.Item extra="说明文字">标题文字</Cells.Item>
-        <Cells.Item extra="说明文字">标题文字</Cells.Item>
+        <Cells.Item suffix="说明文字">标题文字</Cells.Item>
+        <Cells.Item suffix="说明文字">标题文字</Cells.Item>
       </Cells>
 
       <Cells title="带图标、说明的列表项">
-        <Cells.Item extra="说明文字" prefix={<div style={styles.icon} />}>
+        <Cells.Item prefix={<div style={styles.icon} />} suffix="说明文字">
           标题文字
         </Cells.Item>
-        <Cells.Item extra="说明文字" prefix={<div style={styles.icon} />}>
+        <Cells.Item prefix={<div style={styles.icon} />} suffix="说明文字">
           标题文字
         </Cells.Item>
       </Cells>
 
       <Cells title="带跳转的列表项">
-        <Cells.Item arrow type="a">
-          cell standard
+        <Cells.Item description="副标题" arrow>
+          标题文字
         </Cells.Item>
-        <Cells.Item arrow type="a">
-          cell standard
-        </Cells.Item>
+        <Cells.Item arrow>标题文字</Cells.Item>
       </Cells>
 
       <Cells title="带说明、跳转的列表项">
-        <Cells.Item extra="说明文字" arrow type="a">
-          cell standard
+        <Cells.Item suffix="说明文字" arrow>
+          标题文字
         </Cells.Item>
-        <Cells.Item extra="说明文字" arrow type="a">
-          cell standard
+        <Cells.Item suffix="说明文字" arrow>
+          标题文字
         </Cells.Item>
       </Cells>
 
       <Cells title="带图标、说明的列表项">
-        <Cells.Item
-          extra="说明文字"
-          prefix={<div style={styles.icon} />}
-          arrow
-          type="a"
-        >
+        <Cells.Item prefix={<div style={styles.icon} />} suffix="说明文字" arrow>
           标题文字
         </Cells.Item>
-        <Cells.Item
-          extra="说明文字"
-          prefix={<div style={styles.icon} />}
-          arrow
-          type="a"
-        >
+        <Cells.Item prefix={<div style={styles.icon} />} suffix="说明文字" arrow>
           标题文字
         </Cells.Item>
       </Cells>

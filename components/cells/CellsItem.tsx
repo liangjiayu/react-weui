@@ -2,51 +2,33 @@ import classNames from 'classnames';
 import type { ReactNode } from 'react';
 import React from 'react';
 
-export type CellsItemProps = {
+export interface CellsItemProps
+  extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'prefix'> {
   prefix?: ReactNode;
-  extra?: ReactNode;
+  suffix?: ReactNode;
   arrow?: boolean;
-  onClick?: () => void;
+  description?: ReactNode;
   className?: string;
   style?: React.CSSProperties;
-  type?: 'div' | 'label' | 'a';
   children?: React.ReactNode;
-};
+}
 
 const CellsItem: React.FC<CellsItemProps> = (props) => {
-  const {
-    children,
-    prefix,
-    arrow,
-    extra,
-    onClick,
-    className,
-    type = 'div',
-    ...restProps
-  } = props;
+  const { prefix, arrow, className, suffix, children, style, onClick, description, ...restProps } =
+    props;
 
-  const classes = classNames(
-    'weui-cell',
-    { 'weui-cell_access': arrow },
-    className,
-  );
+  const classes = classNames('weui-cell', { 'weui-cell_access': arrow }, className);
 
-  const content = (
-    <>
+  // ============================ Render ============================
+  return (
+    <a {...restProps} className={classes} onClick={onClick} style={style}>
       {prefix && <div className="weui-cell__hd">{prefix}</div>}
-      {children && <div className="weui-cell__bd">{children}</div>}
-      {(arrow || extra) && <div className="weui-cell__ft">{extra}</div>}
-    </>
-  );
-
-  return React.createElement(
-    type,
-    {
-      className: classes,
-      onClick: onClick,
-      ...restProps,
-    },
-    content,
+      <div className="weui-cell__bd">
+        {children && <>{children}</>}
+        {description && <div className="weui-cell__desc">{description}</div>}
+      </div>
+      {(arrow || suffix) && <div className="weui-cell__ft">{suffix}</div>}
+    </a>
   );
 };
 

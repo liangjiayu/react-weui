@@ -1,13 +1,18 @@
 ---
-group: 
+group:
   title: 通用
-  order: 0
-title: Cells 列表
+  order: 1
+title: Cells 单元格
 ---
 
-# Cells 列表
+## 何时使用
 
-<code src="./demos/demo1.tsx"></code>
+文案说明
+
+## 代码演示
+
+<!-- prettier-ignore -->
+<code src="./demo/basic.tsx">基础</code>
 
 ## API
 

@@ -1,17 +1,21 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { type HtmlHTMLAttributes, useMemo } from 'react';
 
-type FooterProps = {
-  links?: React.ReactNode;
+interface FooterProps extends HtmlHTMLAttributes<HTMLDivElement> {
+  links?: FooterLinkProps[];
   text?: React.ReactNode;
   bottom?: boolean;
   className?: string;
   style?: React.CSSProperties;
   children?: React.ReactNode;
-};
+}
+
+interface FooterLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  children?: React.ReactNode;
+}
 
 const Footer: React.FC<FooterProps> = (props) => {
-  const { links, text, children, style, className, bottom } = props;
+  const { links = [], text, children, style, className, bottom, ...restProps } = props;
 
   const classes = classNames(
     'weui-footer',
@@ -21,13 +25,31 @@ const Footer: React.FC<FooterProps> = (props) => {
     className,
   );
 
+  // ============================ Render ============================
+  const linksNode = useMemo(() => {
+    if (links.length === 0) return null;
+    return (
+      <div className="weui-footer__links">
+        {links.map((link, index) => (
+          <a {...link} key={index} className="weui-footer__link weui-wa-hotarea">
+            {link.children}
+          </a>
+        ))}
+      </div>
+    );
+  }, [links]);
+
   return (
-    <div className={classes} style={style}>
-      {links && <div className="weui-footer__links">{links}</div>}
+    <div {...restProps} className={classes} style={style}>
+      {linksNode}
       {text && <div className="weui-footer__text">{text}</div>}
       {children}
     </div>
   );
 };
+
+if (process.env.NODE_ENV !== 'production') {
+  Footer.displayName = 'Footer';
+}
 
 export default Footer;

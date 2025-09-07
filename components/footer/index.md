@@ -1,13 +1,18 @@
 ---
-group: 
+group:
   title: 布局
   order: 1
-title: 页脚
+title: Footer 页脚
 ---
 
-# Footer 页脚
+## 何时使用
 
-<code src="./demos/index.tsx"></code>
+文案说明
+
+## 代码演示
+
+<!-- prettier-ignore -->
+<code src="./demo/basic.tsx">基础</code>
 
 ## API
 

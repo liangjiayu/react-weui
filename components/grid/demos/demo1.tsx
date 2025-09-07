@@ -1,8 +1,4 @@
-import {
-  AndroidOutlined,
-  AppleOutlined,
-  WindowsOutlined,
-} from '@ant-design/icons';
+import { AndroidOutlined, AppleOutlined, WindowsOutlined } from '@ant-design/icons';
 import React from 'react';
 import { Grid } from 'react-weui';
 

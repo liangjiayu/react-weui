@@ -9,11 +9,7 @@ const DemoLayout: React.FC = () => {
   const outlet = useOutlet();
 
   return (
-    <div
-      className="dumi-mobile-demo-layout"
-      ref={target}
-      data-html2sketch-container
-    >
+    <div className="dumi-mobile-demo-layout" ref={target} data-html2sketch-container>
       {outlet}
     </div>
   );

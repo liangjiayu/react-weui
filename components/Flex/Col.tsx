@@ -30,11 +30,7 @@ const Col: React.FC<ColProps> = (props) => {
   }
 
   return (
-    <div
-      {...others}
-      style={{ ...mergedStyle, flex: flex, ...style }}
-      className={classes}
-    >
+    <div {...others} style={{ ...mergedStyle, flex: flex, ...style }} className={classes}>
       {children}
     </div>
   );

@@ -18,8 +18,7 @@ export default () => {
           onClick={() => {
             Dialog.alert({
               title: '弹窗标题',
-              content:
-                '弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内',
+              content: '弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内',
               onOk: () => {
                 console.log('onOk');
               },
@@ -32,8 +31,7 @@ export default () => {
           onClick={() => {
             Dialog.confirm({
               title: '弹窗标题',
-              content:
-                '弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内',
+              content: '弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内',
               onOk: () => {
                 console.log('onOk');
               },
@@ -52,8 +50,7 @@ export default () => {
           onClick={() => {
             Dialog.confirm({
               title: '弹窗标题',
-              content:
-                '弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内',
+              content: '弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内',
               onOk: async () => {
                 await sleep(1000);
                 console.log('onOk');

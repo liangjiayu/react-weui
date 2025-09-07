@@ -1,9 +1,4 @@
-import {
-  type IPreviewerProps,
-  useLocale,
-  useRouteMeta,
-  useSiteData,
-} from 'dumi';
+import { type IPreviewerProps, useLocale, useRouteMeta, useSiteData } from 'dumi';
 import Previewer from 'dumi/theme-default/builtins/Previewer';
 import React, { type FC, useCallback, useEffect, useState } from 'react';
 import Device from '../../slots/Device';
@@ -39,18 +34,14 @@ const MobilePreviewer: FC<IPreviewerProps> = (props) => {
       className={mobile ? 'dumi-mobile-previewer' : undefined}
       forceShowCode={mobile}
       style={{
-        '--device-width': themeConfig.deviceWidth
-          ? `${themeConfig.deviceWidth}px`
-          : undefined,
+        '--device-width': themeConfig.deviceWidth ? `${themeConfig.deviceWidth}px` : undefined,
       }}
       _live_in_iframe={mobile}
     >
       {mobile && (
         <Device
           url={demoUrl}
-          inlineHeight={
-            typeof props.iframe === 'number' ? props.iframe : undefined
-          }
+          inlineHeight={typeof props.iframe === 'number' ? props.iframe : undefined}
         />
       )}
       {!mobile && props?.children}

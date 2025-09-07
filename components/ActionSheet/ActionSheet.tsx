@@ -25,14 +25,7 @@ type ActionSheetItemProps = {
 };
 
 const ActionSheetItem: React.FC<ActionSheetItemProps> = (props) => {
-  const {
-    name,
-    onClick = () => {},
-    subname,
-    disabled,
-    warn,
-    className,
-  } = props;
+  const { name, onClick = () => {}, subname, disabled, warn, className } = props;
 
   return (
     <div

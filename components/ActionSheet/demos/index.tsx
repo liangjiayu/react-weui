@@ -147,9 +147,7 @@ function DiyDemo() {
           setVisible(false);
         }}
       >
-        <div style={{ padding: '16px 16px 100px', backgroundColor: '#fff' }}>
-          123
-        </div>
+        <div style={{ padding: '16px 16px 100px', backgroundColor: '#fff' }}>123</div>
       </ActionSheet>
     </>
   );

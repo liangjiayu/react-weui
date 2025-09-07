@@ -34,12 +34,7 @@ const TextArea: React.FC<TextAreaProps> = (props) => {
 
   return (
     <>
-      <textarea
-        {...restProps}
-        value={value}
-        onChange={handleChange}
-        className={classes}
-      />
+      <textarea {...restProps} value={value} onChange={handleChange} className={classes} />
       {showCount && (
         <div className="weui-textarea-counter">
           {value?.length}

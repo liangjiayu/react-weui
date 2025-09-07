@@ -12,12 +12,7 @@ export default () => {
         <div className="weui-cells__group weui-cells__group_form">
           <Cells title="问题描述">
             <Cells.Item>
-              <TextArea
-                placeholder="请描述你所发生的问题"
-                rows={3}
-                showCount
-                maxLength={100}
-              />
+              <TextArea placeholder="请描述你所发生的问题" rows={3} showCount maxLength={100} />
             </Cells.Item>
           </Cells>
         </div>

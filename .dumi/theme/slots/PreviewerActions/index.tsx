@@ -1,12 +1,7 @@
 import { useRouteMeta } from 'dumi';
 import PreviewerActions from 'dumi/theme-default/slots/PreviewerActions';
 import QRCode from 'qrcode.react';
-import React, {
-  type ComponentProps,
-  type FC,
-  useEffect,
-  useState,
-} from 'react';
+import React, { type ComponentProps, type FC, useEffect, useState } from 'react';
 import './index.less';
 
 type IPreviewerActionsProps = ComponentProps<typeof PreviewerActions> & {

@@ -43,10 +43,7 @@ export default () => {
         </div>
       </DemoBlock>
 
-      <DemoBlock
-        title="独立使用"
-        style={{ display: 'flex', alignItems: 'center', fontSize: 0 }}
-      >
+      <DemoBlock title="独立使用" style={{ display: 'flex', alignItems: 'center', fontSize: 0 }}>
         <div className="mr-10">
           <Badge count={11} color="#faad14" />
         </div>

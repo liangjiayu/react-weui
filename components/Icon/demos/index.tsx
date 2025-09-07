@@ -36,9 +36,7 @@ export default () => {
       <DemoBlock title="强烈警告">
         <div style={styles.box}>
           <Icon type="warn" size="64px" />
-          <span style={styles.word}>
-            用于表示操作后将引起严重的不可挽回的后果的情况
-          </span>
+          <span style={styles.word}>用于表示操作后将引起严重的不可挽回的后果的情况</span>
         </div>
       </DemoBlock>
 

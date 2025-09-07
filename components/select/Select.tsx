@@ -27,12 +27,7 @@ const Select: React.FC<SelectProps> = (props) => {
   const classes = classNames('weui-select', className);
 
   return (
-    <select
-      {...restProps}
-      className={classes}
-      onChange={handleChange}
-      value={value}
-    >
+    <select {...restProps} className={classes} onChange={handleChange} value={value}>
       {children}
     </select>
   );

@@ -2,10 +2,7 @@ import classNames from 'classnames';
 import type { ReactNode } from 'react';
 import React from 'react';
 
-type ButtonProps = Omit<
-  React.AnchorHTMLAttributes<HTMLAnchorElement>,
-  'type'
-> & {
+type ButtonProps = Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'type'> & {
   type?: 'primary' | 'default' | 'warn';
   size?: 'mini' | 'medium';
   block?: boolean;
@@ -45,13 +42,7 @@ const Button: React.FC<ButtonProps> = (props) => {
 
   // ============================ Render ============================
   return (
-    <a
-      {...restProps}
-      role="button"
-      onClick={onClick}
-      className={classes}
-      style={style}
-    >
+    <a {...restProps} role="button" onClick={onClick} className={classes} style={style}>
       {loading && <i className="weui-mask-loading" />}
       {children}
     </a>

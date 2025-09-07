@@ -30,11 +30,7 @@ export default () => {
                   </div>
                 }
               >
-                <Input
-                  placeholder="填写绑定的电话号码"
-                  type="number"
-                  pattern="[0-9]*"
-                />
+                <Input placeholder="填写绑定的电话号码" type="number" pattern="[0-9]*" />
               </Cells.Item>
             </Cells>
           </div>

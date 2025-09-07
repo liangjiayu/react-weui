@@ -20,9 +20,7 @@ const CheckboxGroup: React.FC<CheckboxGroupProps> = (props) => {
     value: props.value,
     defaultValue: props.defaultValue || [],
   });
-  const [registeredValues, setRegisteredValues] = React.useState<
-    CheckboxValueType[]
-  >([]);
+  const [registeredValues, setRegisteredValues] = React.useState<CheckboxValueType[]>([]);
 
   const cancelValue = (val: string) => {
     setRegisteredValues((prevValues) => prevValues.filter((v) => v !== val));

@@ -12,13 +12,7 @@ export type ToastProps = {
 let singleToast = () => {};
 
 const Toast: React.FC<ToastProps> = (props) => {
-  const {
-    icon,
-    content,
-    duration = 2000,
-    onClose = () => {},
-    maskVisible,
-  } = props;
+  const { icon, content, duration = 2000, onClose = () => {}, maskVisible } = props;
   const [visible, setVisible] = useState(true);
   let timer = 0;
 

@@ -16,16 +16,8 @@ const defaultProps = {
 } as Required<Pick<RowProps, 'align' | 'justify' | 'gutter'>>;
 
 const Row: React.FC<RowProps> = (props) => {
-  const {
-    children,
-    align,
-    justify,
-    gutter,
-    wrap,
-    style,
-    className,
-    ...others
-  } = props as RowProps & typeof defaultProps;
+  const { children, align, justify, gutter, wrap, style, className, ...others } =
+    props as RowProps & typeof defaultProps;
 
   const classes = classNames(
     'weui-row',

@@ -117,15 +117,8 @@ const Slider: React.FC<SliderProps> = (props) => {
         aria-valuenow={value}
         aria-disabled={disabled}
       >
-        <div
-          className="weui-slider__inner"
-          ref={sliderBox}
-          onTouchStart={onClick}
-        >
-          <div
-            className="weui-slider__track"
-            style={{ width: `${valuePercent}%` }}
-          />
+        <div className="weui-slider__inner" ref={sliderBox} onTouchStart={onClick}>
+          <div className="weui-slider__track" style={{ width: `${valuePercent}%` }} />
           <div
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}

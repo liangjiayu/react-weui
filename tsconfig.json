@@ -15,7 +15,7 @@
     /* Bundler mode */
     "esModuleInterop": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
+    "jsx": "react",
     "resolveJsonModule": true,
 
     /* Others */

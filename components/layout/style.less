@@ -3,6 +3,7 @@
 .weui-row {
   display: flex;
   flex-flow: row wrap;
+  box-sizing: border-box;
 
   &--nowrap {
     flex-wrap: nowrap;
@@ -46,6 +47,7 @@
   position: relative;
   max-width: 100%;
   min-height: 1px;
+  box-sizing: border-box;
 }
 
 .loop-grid-columns(@index) when (@index > 0) {

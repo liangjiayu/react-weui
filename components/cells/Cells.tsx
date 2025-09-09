@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React from 'react';
 
 export interface CellsProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -10,11 +11,17 @@ export interface CellsProps extends React.HTMLAttributes<HTMLDivElement> {
 const Cells: React.FC<CellsProps> = (props) => {
   const { title, children, className, style, ...restProps } = props;
 
+  const classes = classNames('weui-cells', className);
+
   // ============================ Render ============================
   return (
-    <div {...restProps} className={className} style={style}>
+    <div>
       {title && <div className="weui-cells__title">{title}</div>}
-      {children && <div className="weui-cells">{children}</div>}
+      {children && (
+        <div {...restProps} className={classes} style={style}>
+          {children}
+        </div>
+      )}
     </div>
   );
 };

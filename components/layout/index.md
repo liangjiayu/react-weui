@@ -1,13 +1,21 @@
 ---
 group:
   title: 布局
-  order: 1
+  order: 0
 title: Layout 栅格布局
 ---
 
-# Layout 栅格布局
+## 何时使用
 
-<code src="./demos/index.tsx"></code>
+文案说明
+
+## 代码演示
+
+<!-- prettier-ignore -->
+<code src="./demo/basic.tsx" title="基础"></code>
+<code src="./demo/flex-justify" title="排版"></code>
+<code src="./demo/flex-align" title="对齐"></code>
+<code src="./demo/flex-stretch" title="Flex 填充"></code>
 
 # API
 

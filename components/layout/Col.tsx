@@ -2,14 +2,30 @@ import classNames from 'classnames';
 import React, { useContext } from 'react';
 import RowContext from './RowContext';
 
-export type ColProps = {
-  span?: number;
-  offset?: number;
+interface ColProps extends React.HTMLAttributes<HTMLDivElement> {
   flex?: string | number;
-} & React.HTMLAttributes<HTMLDivElement>;
+  offset?: number;
+  span?: number;
+}
+
+/**
+ * 兼容 flex 样式
+ */
+function parseFlex(flex: number | string): string {
+  if (typeof flex === 'number') {
+    return `${flex} ${flex} auto`;
+  }
+
+  if (/^\d+(\.\d+)?(px|em|rem|%)$/.test(flex)) {
+    return `0 0 ${flex}`;
+  }
+
+  return flex;
+}
 
 const Col: React.FC<ColProps> = (props) => {
-  const { children, span, offset, flex, style, className, ...others } = props;
+  const { flex, offset, span, className, style, children, ...restProps } = props;
+  const { gutter } = useContext(RowContext);
 
   const classes = classNames(
     'weui-col',
@@ -20,20 +36,27 @@ const Col: React.FC<ColProps> = (props) => {
     className,
   );
 
-  const { gutter } = useContext(RowContext);
-
   const mergedStyle: React.CSSProperties = {};
-  if (gutter && gutter > 0) {
-    const horizontalGutter = gutter / 2;
+  if (gutter && gutter[0] > 0) {
+    const horizontalGutter = gutter[0] / 2;
     mergedStyle.paddingLeft = horizontalGutter;
     mergedStyle.paddingRight = horizontalGutter;
   }
 
+  if (flex) {
+    mergedStyle.flex = parseFlex(flex);
+  }
+
+  // ==================== Render =====================
   return (
-    <div {...others} style={{ ...mergedStyle, flex: flex, ...style }} className={classes}>
+    <div {...restProps} style={{ ...mergedStyle, ...style }} className={classes}>
       {children}
     </div>
   );
 };
+
+if (process.env.NODE_ENV !== 'production') {
+  Col.displayName = 'Col';
+}
 
 export default Col;

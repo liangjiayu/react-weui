@@ -1,55 +1,58 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { useMemo } from 'react';
 import RowContext from './RowContext';
 
-export type RowProps = {
-  gutter?: number;
+interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   align?: 'top' | 'center' | 'bottom';
+  gutter?: number | [number, number];
   justify?: 'start' | 'center' | 'end' | 'space-around' | 'space-between';
   wrap?: boolean;
-} & React.HTMLAttributes<HTMLDivElement>;
-
-const defaultProps = {
-  gutter: 0,
-  align: 'top',
-  justify: 'start',
-} as Required<Pick<RowProps, 'align' | 'justify' | 'gutter'>>;
+}
 
 const Row: React.FC<RowProps> = (props) => {
-  const { children, align, justify, gutter, wrap, style, className, ...others } =
-    props as RowProps & typeof defaultProps;
+  const { align, gutter = 0, justify, wrap, style, className, children, ...restProps } = props;
 
-  const classes = classNames(
-    'weui-row',
-    `weui-row--align-${align}`,
-    `weui-row--justify-${justify}`,
-    {
-      'weui-row--nowrap': wrap === false,
-    },
-    className,
-  );
+  // ============================ Styles ============================
+  const gutters = (Array.isArray(gutter) ? gutter : [gutter, undefined]) as [number, number];
+  const [gutterH, gutterV] = gutters;
 
   const rowStyle: React.CSSProperties = {};
-  const horizontalGutter = gutter > 0 ? gutter / -2 : undefined;
+  const horizontalGutter = gutterH && gutterH > 0 ? gutterH / -2 : undefined;
+  rowStyle.rowGap = gutterV;
 
   if (horizontalGutter) {
     rowStyle.marginLeft = horizontalGutter;
     rowStyle.marginRight = horizontalGutter;
   }
 
-  const rowContext = {
-    gutter: gutter,
-  };
+  const classes = classNames(
+    'weui-row',
+    {
+      [`weui-row--align-${align}`]: align,
+      [`weui-row--justify-${justify}`]: justify,
+      'weui-row--nowrap': wrap === false,
+    },
+    className,
+  );
 
+  const rowContext = useMemo(() => {
+    return {
+      gutter: gutters,
+    };
+  }, [gutters]);
+
+  // ============================ Render ============================
   return (
     <RowContext.Provider value={rowContext}>
-      <div {...others} style={{ ...rowStyle, ...style }} className={classes}>
+      <div {...restProps} style={{ ...rowStyle, ...style }} className={classes}>
         {children}
       </div>
     </RowContext.Provider>
   );
 };
 
-Row.defaultProps = defaultProps;
+if (process.env.NODE_ENV !== 'production') {
+  Row.displayName = 'Row';
+}
 
 export default Row;

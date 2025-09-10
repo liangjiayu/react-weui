@@ -2,12 +2,17 @@
 group:
   title: 数据展示
   order: 2
-title: 九宫格
+title: Grid 九宫格
 ---
 
-# Grid 九宫格
+## 何时使用
 
-<code src="./demos/demo1.tsx"></code>
+文案说明
+
+## 代码演示
+
+<!-- prettier-ignore -->
+<code src="./demo/basic.tsx">基础</code>
 
 ## API
 

@@ -1,27 +1,25 @@
 import classNames from 'classnames';
 import type { ReactNode } from 'react';
 import React, { useMemo } from 'react';
-import './style.less';
 
-type GridProps = {
-  items: GridItemType[];
+interface GridProps extends React.HtmlHTMLAttributes<HTMLDivElement> {
+  items: GridItemProp[];
   className?: string;
   style?: React.CSSProperties;
-};
+}
 
-type GridItemType = {
-  key: string;
+interface GridItemProp extends React.HtmlHTMLAttributes<HTMLDivElement> {
+  key: React.Key;
   label?: ReactNode;
   icon?: ReactNode;
-  onClick?: () => void;
-  [key: string]: any;
-};
+}
 
-function itemsToNodes(list: GridItemType[]) {
-  return (list || []).map((i) => {
-    const { key, icon, label, ...restProps } = i;
+function itemsToNodes(list: GridItemProp[]) {
+  return list.map((item) => {
+    const { key, label, icon, className, ...restProps } = item;
+
     return (
-      <div className="weui-grid" key={key} {...restProps}>
+      <div className={classNames('weui-grid', className)} key={key} {...restProps}>
         <div className="weui-grid__icon">{icon}</div>
         <div className="weui-grid__label">{label}</div>
       </div>
@@ -30,7 +28,7 @@ function itemsToNodes(list: GridItemType[]) {
 }
 
 const Grid: React.FC<GridProps> = (props) => {
-  const { items = [], className, style } = props;
+  const { items = [], className, style, ...restProps } = props;
 
   const itemsChildren = useMemo(() => {
     return itemsToNodes(items);
@@ -38,8 +36,9 @@ const Grid: React.FC<GridProps> = (props) => {
 
   const classes = classNames('weui-grids', className);
 
+  // ============================ Render ============================
   return (
-    <div className={classes} style={style}>
+    <div {...restProps} className={classes} style={style}>
       {itemsChildren}
     </div>
   );

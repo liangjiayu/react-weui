@@ -6,15 +6,15 @@ export default () => {
   return (
     <div
       style={{
-        overflow: 'hidden',
         backgroundColor: 'var(--weui-BG-0)',
         minHeight: '100vh',
       }}
     >
-      <div className="p-40">
-        <div className="text-20">Grid</div>
-        <div className="text-14">九宫格</div>
+      <div className="page__hd">
+        <div className="page__title">Grid</div>
+        <div className="page__desc">九宫格</div>
       </div>
+
       <Grid
         items={[
           {
@@ -26,14 +26,14 @@ export default () => {
             key: '2',
             icon: <AppleOutlined />,
             label: 'Grid',
-            onClick: () => {
-              console.log('todo');
-            },
           },
           {
             key: '3',
             icon: <WindowsOutlined />,
             label: 'Grid',
+            onClick: () => {
+              console.log('onClick');
+            },
           },
           {
             key: '4',

@@ -2,12 +2,20 @@
 group:
   title: 数据展示
   order: 2
-title: 提示页
+title: Msg 提示页
 ---
 
-# Msg 提示页
+## 何时使用
 
-<code src="./demos/index.tsx"></code>
+文案说明
+
+## 代码演示
+
+<!-- prettier-ignore -->
+<code src="./demo/basic.tsx">基础</code>
+<code src="./demo/msg-warn.tsx">失败提示页</code>
+<code src="./demo/msg-text-primary.tsx">无图标提示页</code>
+<code src="./demo/msg-custom.tsx">自定义提示页</code>
 
 ## API
 

@@ -9,7 +9,7 @@ export { default as Grid } from './grid';
 export { default as Icon } from './icon';
 export { default as Input } from './input';
 export { Col, Row } from './layout';
-export { default as Msg } from './Msg';
+export { default as Msg } from './msg';
 export { default as Radio } from './radio';
 export { default as Select } from './select';
 export { default as Slider } from './slider';

@@ -19,9 +19,9 @@ const styles: Record<string, React.CSSProperties> = {
 export default () => {
   return (
     <div style={{ padding: '0 0 100px' }}>
-      <div className="p-40">
-        <div className="text-20">Badge</div>
-        <div className="text-14">徽标</div>
+      <div className="page__hd">
+        <div className="page__title">Badge</div>
+        <div className="page__desc">徽标</div>
       </div>
 
       <DemoBlock title="基础用法" style={{ display: 'flex' }}>

@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import React, { useMemo } from 'react';
 import './style.less';
 
-type BadgeProps = {
+interface BadgeProps {
   color?: string;
   count?: React.ReactNode;
   dot?: boolean;
@@ -13,7 +13,7 @@ type BadgeProps = {
   className?: string;
   style?: React.CSSProperties;
   children?: ReactNode;
-};
+}
 
 const Badge: React.FC<BadgeProps> = (props) => {
   const {
@@ -44,25 +44,10 @@ const Badge: React.FC<BadgeProps> = (props) => {
     };
   }, [style, offset]);
 
-  const displayNode =
-    typeof count === 'object'
-      ? // @ts-ignore
-        React.cloneElement(count, {
-          // @ts-expect-error
-          style: { ...count?.props?.style, ...mergedStyle },
-          className: classNames(
-            // @ts-expect-error
-            count?.props?.className,
-            {
-              'weui-badge--fixed': Boolean(children),
-              'weui-badge_dot': dot,
-            },
-            className,
-          ),
-        })
-      : undefined;
-
   const displayCount = useMemo(() => {
+    if (typeof count === 'object') {
+      return count;
+    }
     if (dot) {
       return true;
     }
@@ -72,43 +57,36 @@ const Badge: React.FC<BadgeProps> = (props) => {
     if (!count) {
       return null;
     }
-    // @ts-expect-error
-    if (overflowCount && count > overflowCount) {
+    if (overflowCount && (count as number) > overflowCount) {
       return `${overflowCount}+`;
     }
     return count;
   }, [count, dot, overflowCount, showZero]);
 
-  // ==========  Render ==========
-  if (displayNode) {
-    return (
-      <div className="weui-badge-wrap">
-        {children}
-        {displayNode}
-      </div>
-    );
-  }
+  // ============================ Render ============================
+  const classes = classNames(
+    {
+      'weui-badge': typeof count !== 'object',
+      'weui-badge--fixed': Boolean(children),
+      'weui-badge_dot': dot,
+    },
+    className,
+  );
 
   return (
     <div className="weui-badge-wrap">
       {children}
       {displayCount && (
-        <div
-          style={{ ...mergedStyle, backgroundColor: color }}
-          className={classNames(
-            'weui-badge',
-            {
-              'weui-badge--fixed': Boolean(children),
-              'weui-badge_dot': dot,
-            },
-            className,
-          )}
-        >
+        <div style={{ ...mergedStyle, backgroundColor: color }} className={classes}>
           {displayCount}
         </div>
       )}
     </div>
   );
 };
+
+if (process.env.NODE_ENV !== 'production') {
+  Badge.displayName = 'Badge';
+}
 
 export default Badge;

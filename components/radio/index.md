@@ -2,7 +2,7 @@
 group:
   title: 数据录入
   order: 3
-title: 单选框
+title: Radio 单选框
 ---
 
 # Radio 单选框

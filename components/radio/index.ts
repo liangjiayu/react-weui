@@ -1,18 +1,9 @@
-import type { ChangeEvent } from 'react';
-import type { RadioProps } from './Radio';
+import type { RadioProps } from './interface';
 import _Radio from './Radio';
 import RadioGroup from './RadioGroup';
 
 interface CompoundedComponent extends React.FC<RadioProps> {
   Group: typeof RadioGroup;
-}
-
-// @ts-expect-error
-export interface RadioChangeEvent extends ChangeEvent<HTMLInputElement> {
-  target: {
-    value: any;
-    checked: boolean;
-  };
 }
 
 const Radio = _Radio as CompoundedComponent;

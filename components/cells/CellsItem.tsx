@@ -8,16 +8,31 @@ export interface CellsItemProps
   suffix?: ReactNode;
   arrow?: boolean;
   description?: ReactNode;
+  link?: boolean;
   className?: string;
   style?: React.CSSProperties;
   children?: React.ReactNode;
 }
 
 const CellsItem: React.FC<CellsItemProps> = (props) => {
-  const { prefix, arrow, className, suffix, children, style, onClick, description, ...restProps } =
-    props;
+  const {
+    prefix,
+    arrow,
+    className,
+    suffix,
+    children,
+    style,
+    onClick,
+    description,
+    link,
+    ...restProps
+  } = props;
 
-  const classes = classNames('weui-cell', { 'weui-cell_access': arrow }, className);
+  const classes = classNames(
+    'weui-cell',
+    { 'weui-cell_access': arrow, 'weui-cell_link': link, 'weui-cell_active': link },
+    className,
+  );
 
   // ============================ Render ============================
   return (

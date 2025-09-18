@@ -1,48 +1,71 @@
 import React from 'react';
 import { useMergedState } from '../_utils';
-import type { RadioChangeEvent } from './index';
+import type { RadioChangeEvent, RadioGroupProps } from './interface';
+import Radio from './Radio';
 import RadioGroupContext from './RadioGroupContext';
 
-export type RadioGroupProps = {
-  defaultValue?: any;
-  value?: any;
-  onChange?: (e: RadioChangeEvent) => void;
-  disabled?: boolean;
-  name?: string;
-  title?: string;
-  children?: React.ReactNode;
-};
-
 const RadioGroup: React.FC<RadioGroupProps> = (props) => {
-  const { onChange, title } = props;
+  const {
+    onChange,
+    title,
+    children,
+    options,
+    disabled,
+    name,
+    value: customizedValue,
+    defaultValue,
+  } = props;
+
   const [value, setValue] = useMergedState({
-    value: props.value,
-    defaultValue: props.defaultValue,
+    value: customizedValue,
+    defaultValue: defaultValue,
   });
 
-  const onRadioChange = (ev: RadioChangeEvent) => {
-    const val = ev.target.value;
-    if (props.value === undefined) {
+  const onRadioChange = (event: RadioChangeEvent) => {
+    const val = event.target.value;
+    if (customizedValue === undefined) {
       setValue(val);
     }
     if (onChange) {
-      onChange(ev);
+      onChange(event);
     }
   };
+
+  // ============================ Render ============================
+  let childrenToRender = children;
+  if (options && options.length > 0) {
+    childrenToRender = options.map((option) => {
+      return (
+        <Radio
+          key={`radio-group-value-options-${option.value}`}
+          disabled={option.disabled || disabled}
+          value={option.value}
+          checked={value === option.value}
+          title={option.title}
+          style={option.style}
+          className={option.className}
+          id={option.id}
+          required={option.required}
+        >
+          {option.label}
+        </Radio>
+      );
+    });
+  }
 
   return (
     <div className="weui-cells__group weui-cells__group_form">
       {title && <div className="weui-cells__title">{title}</div>}
-      <div className="weui-cells">
+      <div className="weui-cells  weui-cells_radio">
         <RadioGroupContext.Provider
           value={{
             value: value,
             onChange: onRadioChange,
-            disabled: props.disabled,
-            name: props.name,
+            disabled: disabled,
+            name: name,
           }}
         >
-          {props.children}
+          {childrenToRender}
         </RadioGroupContext.Provider>
       </div>
     </div>

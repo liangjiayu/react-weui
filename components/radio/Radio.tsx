@@ -1,17 +1,7 @@
-import type { InputHTMLAttributes } from 'react';
 import React from 'react';
 import { useMergedState } from '../_utils';
-import type { RadioChangeEvent } from './index';
+import type { RadioChangeEvent, RadioProps } from './interface';
 import RadioGroupContext from './RadioGroupContext';
-
-export type RadioProps = {
-  name?: string;
-  value?: any;
-  checked?: boolean;
-  defaultChecked?: boolean;
-  disabled?: boolean;
-  onChange?: (e: RadioChangeEvent) => void;
-} & Omit<InputHTMLAttributes<HTMLInputElement>, 'type'>;
 
 const Radio: React.FC<RadioProps> = (props) => {
   const { children, ...restProps } = props;
@@ -25,17 +15,7 @@ const Radio: React.FC<RadioProps> = (props) => {
     if (props.checked === undefined) {
       setChecked(e.target.checked);
     }
-    e.target = {
-      value: props.value,
-      checked: e.target.checked,
-      stopPropagation() {
-        e.stopPropagation();
-      },
-      preventDefault() {
-        e.preventDefault();
-      },
-      nativeEvent: e.nativeEvent,
-    } as any;
+    e.target.value = props.value;
 
     props.onChange?.(e);
     groupContext?.onChange(e);
@@ -51,8 +31,9 @@ const Radio: React.FC<RadioProps> = (props) => {
     radioProps.disabled = radioProps.disabled || groupContext.disabled;
   }
 
+  // ============================ Render ============================
   return (
-    <label className="weui-cell weui-cell_active weui-check__label weui-cells_radio">
+    <label className="weui-cell weui-cell_active weui-check__label">
       <div className="weui-cell__bd">{children}</div>
       <div className="weui-cell__ft">
         <input {...radioProps} type="radio" className="weui-check" />

@@ -1,13 +1,6 @@
 import { createContext } from 'react';
-import type { RadioChangeEvent } from './index';
+import type { RadioGroupContextProps } from './interface';
 
-type RadioGroupContextProps = {
-  value: any;
-  onChange: (e: RadioChangeEvent) => void;
-  disabled?: boolean;
-  name?: string;
-};
+const RadioContext = createContext<RadioGroupContextProps | null>(null);
 
-const RowContext = createContext<RadioGroupContextProps | null>(null);
-
-export default RowContext;
+export default RadioContext;

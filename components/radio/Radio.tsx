@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React from 'react';
 import { useMergedState } from '../_utils';
 import type { RadioChangeEvent, RadioProps } from './interface';
@@ -33,7 +34,12 @@ const Radio: React.FC<RadioProps> = (props) => {
 
   // ============================ Render ============================
   return (
-    <label className="weui-cell weui-cell_active weui-check__label">
+    <label
+      className={classNames('weui-cell weui-cell_active weui-check__label', {
+        'weui-cells_radio': !groupContext,
+        'weui-cell_disabled': radioProps.disabled,
+      })}
+    >
       <div className="weui-cell__bd">{children}</div>
       <div className="weui-cell__ft">
         <input {...radioProps} type="radio" className="weui-check" />

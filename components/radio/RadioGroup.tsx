@@ -46,6 +46,7 @@ const RadioGroup: React.FC<RadioGroupProps> = (props) => {
           className={option.className}
           id={option.id}
           required={option.required}
+          onChange={option.onChange}
         >
           {option.label}
         </Radio>
@@ -56,7 +57,7 @@ const RadioGroup: React.FC<RadioGroupProps> = (props) => {
   return (
     <div className="weui-cells__group weui-cells__group_form">
       {title && <div className="weui-cells__title">{title}</div>}
-      <div className="weui-cells  weui-cells_radio">
+      <div className="weui-cells weui-cells_radio">
         <RadioGroupContext.Provider
           value={{
             value: value,

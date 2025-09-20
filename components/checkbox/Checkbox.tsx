@@ -1,17 +1,8 @@
-import type { InputHTMLAttributes } from 'react';
+import classNames from 'classnames';
 import React from 'react';
 import { useMergedState } from '../_utils';
 import CheckboxGroupContext from './CheckboxGroupContext';
-import type { CheckboxChangeEvent } from './index';
-
-export type CheckboxProps = {
-  name?: string;
-  value?: any;
-  checked?: boolean;
-  defaultChecked?: boolean;
-  disabled?: boolean;
-  onChange?: (e: CheckboxChangeEvent) => void;
-} & Omit<InputHTMLAttributes<HTMLInputElement>, 'type'>;
+import type { CheckboxChangeEvent, CheckboxProps } from './interface';
 
 const Checkbox: React.FC<CheckboxProps> = (props) => {
   const { children, ...restProps } = props;
@@ -29,17 +20,7 @@ const Checkbox: React.FC<CheckboxProps> = (props) => {
     if (props.checked === undefined) {
       setChecked(e.target.checked);
     }
-    e.target = {
-      value: props.value,
-      checked: e.target.checked,
-      stopPropagation() {
-        e.stopPropagation();
-      },
-      preventDefault() {
-        e.preventDefault();
-      },
-      nativeEvent: e.nativeEvent,
-    } as any;
+    e.target.value = props.value;
 
     props.onChange?.(e);
   };
@@ -61,7 +42,12 @@ const Checkbox: React.FC<CheckboxProps> = (props) => {
   }
 
   return (
-    <label className="weui-cell weui-cell_active weui-check__label">
+    <label
+      className={classNames('weui-cell weui-cell_active weui-check__label', {
+        'weui-cell_disabled': checkboxProps.disabled,
+        'weui-cells_checkbox': !groupContext,
+      })}
+    >
       <div className="weui-cell__hd">
         <input {...checkboxProps} type="checkbox" className="weui-check" />
         <i className="weui-icon-checked" />

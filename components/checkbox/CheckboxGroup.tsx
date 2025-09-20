@@ -1,26 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useMergedState } from '../_utils';
+import Checkbox from './Checkbox';
 import CheckboxGroupContext from './CheckboxGroupContext';
-import type { CheckboxOptionType, CheckboxValueType } from './index';
-
-export type CheckboxGroupProps = {
-  title?: string;
-  name?: string;
-  defaultValue?: CheckboxValueType[];
-  value?: CheckboxValueType[];
-  onChange?: (checkedValue: CheckboxValueType[]) => void;
-  disabled?: boolean;
-  children?: React.ReactNode;
-};
+import type { CheckboxGroupProps, CheckboxOptionType, CheckboxValueType } from './interface';
 
 const CheckboxGroup: React.FC<CheckboxGroupProps> = (props) => {
-  const { onChange, title } = props;
+  const { onChange, title, children, options, disabled } = props;
 
   const [value, setValue] = useMergedState<CheckboxValueType[]>({
     value: props.value,
     defaultValue: props.defaultValue || [],
   });
-  const [registeredValues, setRegisteredValues] = React.useState<CheckboxValueType[]>([]);
+  const [registeredValues, setRegisteredValues] = useState<CheckboxValueType[]>([]);
 
   const cancelValue = (val: string) => {
     setRegisteredValues((prevValues) => prevValues.filter((v) => v !== val));
@@ -44,6 +35,28 @@ const CheckboxGroup: React.FC<CheckboxGroupProps> = (props) => {
     onChange?.(newValue.filter((val) => registeredValues.indexOf(val) !== -1));
   };
 
+  let childrenToRender = children;
+  if (options && options.length > 0) {
+    childrenToRender = options.map((option) => {
+      return (
+        <Checkbox
+          key={`checkbox-group-value-options-${option.value}`}
+          disabled={option.disabled || disabled}
+          value={option.value}
+          checked={value.includes(option.value)}
+          onChange={option.onChange}
+          title={option.title}
+          style={option.style}
+          className={option.className}
+          id={option.id}
+          required={option.required}
+        >
+          {option.label}
+        </Checkbox>
+      );
+    });
+  }
+
   return (
     <div className="weui-cells__group weui-cells__group_form">
       {title && <div className="weui-cells__title">{title}</div>}
@@ -58,7 +71,7 @@ const CheckboxGroup: React.FC<CheckboxGroupProps> = (props) => {
             toggleOption,
           }}
         >
-          {props.children}
+          {childrenToRender}
         </CheckboxGroupContext.Provider>
       </div>
     </div>

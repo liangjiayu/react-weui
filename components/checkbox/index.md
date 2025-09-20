@@ -5,9 +5,14 @@ group:
 title: Checkbox 多选框
 ---
 
-# Checkbox 多选框
+## 何时使用
 
-<code src="./demos/index.tsx"></code>
+文案说明
+
+## 代码演示
+
+<!-- prettier-ignore -->
+<code src="./demo/basic.tsx">基础</code>
 
 ## API
 

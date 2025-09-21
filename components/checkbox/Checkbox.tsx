@@ -17,11 +17,8 @@ const Checkbox: React.FC<CheckboxProps> = (props) => {
   }, []);
 
   const onChange = (e: CheckboxChangeEvent) => {
-    if (props.checked === undefined) {
-      setChecked(e.target.checked);
-    }
     e.target.value = props.value;
-
+    setChecked(e.target.checked);
     props.onChange?.(e);
   };
 

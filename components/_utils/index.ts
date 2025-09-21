@@ -34,5 +34,12 @@ export const useMergedState = <T>({
     };
   }, []);
 
-  return [val, setVal];
+  // 非受控模式下，组件内部可更新状态
+  const triggerChange = (state: any) => {
+    if (value === undefined) {
+      setVal(state as T);
+    }
+  };
+
+  return [val, triggerChange];
 };

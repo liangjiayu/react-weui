@@ -2,12 +2,17 @@
 group:
   title: 数据录入
   order: 3
-title: 开关
+title: Switch 开关
 ---
 
-# Switch 开关
+## 何时使用
 
-<code src="./demos/index.tsx"></code>
+文案说明
+
+## 代码演示
+
+<!-- prettier-ignore -->
+<code src="./demo/basic.tsx">基础</code>
 
 ## API
 

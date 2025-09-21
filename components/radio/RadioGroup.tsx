@@ -23,12 +23,8 @@ const RadioGroup: React.FC<RadioGroupProps> = (props) => {
 
   const onRadioChange = (event: RadioChangeEvent) => {
     const val = event.target.value;
-    if (customizedValue === undefined) {
-      setValue(val);
-    }
-    if (onChange) {
-      onChange(event);
-    }
+    setValue(val);
+    onChange?.(event);
   };
 
   // ============================ Render ============================

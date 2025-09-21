@@ -29,9 +29,7 @@ const CheckboxGroup: React.FC<CheckboxGroupProps> = (props) => {
     } else {
       newValue.splice(optionIndex, 1);
     }
-    if (props.value === undefined) {
-      setValue(newValue);
-    }
+    setValue(newValue);
     onChange?.(newValue.filter((val) => registeredValues.indexOf(val) !== -1));
   };
 

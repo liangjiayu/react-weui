@@ -13,11 +13,9 @@ const Radio: React.FC<RadioProps> = (props) => {
   });
 
   const onChange = (e: RadioChangeEvent) => {
-    if (props.checked === undefined) {
-      setChecked(e.target.checked);
-    }
     e.target.value = props.value;
 
+    setChecked(e.target.checked);
     props.onChange?.(e);
     groupContext?.onChange(e);
   };

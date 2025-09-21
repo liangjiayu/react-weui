@@ -9,6 +9,8 @@ export interface CellsItemProps
   arrow?: boolean;
   description?: ReactNode;
   link?: boolean;
+  disabled?: boolean;
+  isSwitch?: boolean;
   className?: string;
   style?: React.CSSProperties;
   children?: React.ReactNode;
@@ -25,12 +27,20 @@ const CellsItem: React.FC<CellsItemProps> = (props) => {
     onClick,
     description,
     link,
+    disabled,
+    isSwitch,
     ...restProps
   } = props;
 
   const classes = classNames(
     'weui-cell',
-    { 'weui-cell_access': arrow, 'weui-cell_link': link, 'weui-cell_active': link },
+    {
+      'weui-cell_access': arrow,
+      'weui-cell_link': link,
+      'weui-cell_active': link,
+      'weui-cell_disabled': disabled,
+      'weui-cell_switch': isSwitch,
+    },
     className,
   );
 

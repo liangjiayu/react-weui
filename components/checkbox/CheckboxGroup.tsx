@@ -35,6 +35,7 @@ const CheckboxGroup: React.FC<CheckboxGroupProps> = (props) => {
     onChange?.(newValue.filter((val) => registeredValues.indexOf(val) !== -1));
   };
 
+  // ============================ Render ============================
   let childrenToRender = children;
   if (options && options.length > 0) {
     childrenToRender = options.map((option) => {

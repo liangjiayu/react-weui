@@ -41,6 +41,7 @@ const Checkbox: React.FC<CheckboxProps> = (props) => {
     };
   }
 
+  // ============================ Render ============================
   return (
     <label
       className={classNames('weui-cell weui-cell_active weui-check__label', {

@@ -3,7 +3,7 @@ import { defineConfig } from 'dumi';
 
 export default defineConfig({
   outputPath: '_site',
-  mako: {},
+  // mako: {},
   resolve: {
     docDirs: [{ type: 'doc', dir: 'docs' }],
     atomDirs: [{ type: 'component', dir: 'components' }],
